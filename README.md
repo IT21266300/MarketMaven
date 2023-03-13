@@ -4,3 +4,7 @@ The proposed solution involves developing a mobile application that provides rea
 The impact of the proposed solution is significant, as it not only promotes fair pricing and improved livelihoods for farmers but also ensures that customers receive better value for their money. Moreover, the solution will promote a more efficient and transparent market system, encouraging sustainable economic growth and development.
 The project will involve extensive stakeholder engagement, including farmers, sellers, and customers, to ensure the solution is tailored to their needs and aspirations. The proposed solution represents a significant step towards addressing unfair pricing in Sri Lanka's wholesale fruit and vegetable markets, promoting equitable economic development.
 
+
+<img alt="app" src="https://i.pinimg.com/750x/7b/b1/c8/7bb1c805b5841b8b6b612fa7bfdeb20d.jpg">
+
+
