@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">MarketMaven</string>
+    <string name="farmer_cal_heading">Calculate Profit</string>
+    <string name="farmer_cal_fun_text1">Enter Total Weight (kg):</string>
+    <string name="farmer_cal_fun_text2">Enter Total expenses (LKR):</string>
+    <string name="farmer_cal_fun_text2.1">(*Not Mandatory)</string>
+    <string name="farmer_cal_fun_text3">Profit:</string>
+
+
 </resources>
