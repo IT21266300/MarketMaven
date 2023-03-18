@@ -7,8 +7,9 @@
     android:background="@color/bg_green"
     android:backgroundTint="@color/bg_green">
 
+
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/heder_signup"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:background="@color/text_header"
@@ -16,20 +17,33 @@
         android:text="@string/farmer_cal_heading"
         android:textColor="@color/white"
         android:textSize="24sp"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/item_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        android:text="Iterm Name : Tomato"
+        android:textColor="@color/text"
+        android:textSize="25sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/heder_signup" />
 
     <TextView
         android:id="@+id/textView3"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:padding="16dp"
         android:text="@string/farmer_cal_fun_text1"
-        android:textSize="16sp"
-        app:layout_constraintStart_toStartOf="parent"
+        android:textColor="@color/text"
+        android:textSize="25sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/textView"
-        android:padding="16dp" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/item_name" />
 
     <EditText
         android:id="@+id/editTextTextPersonName2"
@@ -40,21 +54,23 @@
         android:ems="10"
         android:hint="2000kg"
         android:inputType="textPersonName"
-        android:textSize="16sp"
-        app:layout_constraintStart_toStartOf="parent"
+        android:textColor="@color/text"
+        android:textSize="25sp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/textView3" />
 
     <TextView
         android:id="@+id/textView4"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:padding="16dp"
         android:text="@string/farmer_cal_fun_text2"
-        android:textSize="16sp"
-        app:layout_constraintStart_toStartOf="parent"
+        android:textColor="@color/text"
+        android:textSize="25sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/editTextTextPersonName2"
-        android:padding="16dp"  />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/editTextTextPersonName2" />
 
     <EditText
         android:id="@+id/editTextTextPersonName3"
@@ -65,45 +81,77 @@
         android:ems="10"
         android:hint="20000.00"
         android:inputType="textPersonName"
-        android:textSize="16sp"
-        app:layout_constraintStart_toStartOf="parent"
+        android:textColor="@color/text"
+        android:textSize="25sp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/textView4" />
 
     <TextView
         android:id="@+id/textView5"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:padding="16dp"
         android:text="@string/farmer_cal_fun_text2.1"
+        android:textColor="@color/text"
         android:textSize="16sp"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/editTextTextPersonName3"
-        android:padding="16dp" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/editTextTextPersonName3" />
 
     <TextView
         android:id="@+id/textView6"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="158dp"
+        android:layout_height="35dp"
         android:text="@string/farmer_cal_fun_text3"
-        tools:layout_editor_absoluteX="163dp"
-        tools:layout_editor_absoluteY="432dp" />
+        android:textColor="@color/text"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toStartOf="@+id/autoCompleteTextView"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="544dp" />
 
     <AutoCompleteTextView
         android:id="@+id/autoCompleteTextView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="177dp"
+        android:layout_height="53dp"
         android:text="Rs 25000.00"
-        tools:layout_editor_absoluteX="152dp"
-        tools:layout_editor_absoluteY="512dp" />
+        android:textSize="26sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/textView6"
+        tools:layout_editor_absoluteY="534dp" />
 
     <Button
         android:id="@+id/button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="169dp"
+        android:layout_height="65dp"
         android:backgroundTint="@color/text_header"
         android:text="Calculate "
-        tools:layout_editor_absoluteX="143dp"
-        tools:layout_editor_absoluteY="320dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="433dp" />
+
+    <ImageButton
+        android:id="@+id/home_btn"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:background="@color/text_header"
+        app:layout_constraintEnd_toStartOf="@+id/history_btn"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/ic_baseline_home_24"
+        tools:layout_editor_absoluteY="649dp" />
+
+    <ImageButton
+        android:id="@+id/history_btn"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:background="@color/text_header"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/home_btn"
+        app:srcCompat="@drawable/ic_baseline_history_24"
+        tools:layout_editor_absoluteY="648dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

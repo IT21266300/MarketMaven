@@ -5,6 +5,8 @@
     <string name="farmer_cal_fun_text2">Enter Total expenses (LKR):</string>
     <string name="farmer_cal_fun_text2.1">(*Not Mandatory)</string>
     <string name="farmer_cal_fun_text3">Your Profit is:</string>
+    <string name="signup_head">Sign Up</string>
+    <string name="signup_">Sign Up</string>
 
 
 </resources>
