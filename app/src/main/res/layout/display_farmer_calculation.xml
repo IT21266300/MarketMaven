@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/backgroundMain">
+
+    <ImageButton
+        android:id="@+id/history_btn3"
+        tools:layout_editor_absoluteY="648dp"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="64dp"
+        android:layout_marginBottom="27dp"
+        android:background="@color/text_header"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/home_btn"
+        app:srcCompat="@drawable/ic_baseline_history_24"
+        tools:ignore="UnknownIdInLayout" />
+
+    <ImageButton
+        android:id="@+id/home_btn3"
+        tools:layout_editor_absoluteY="649dp"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="67dp"
+        android:layout_marginEnd="116dp"
+        android:layout_marginBottom="26dp"
+        android:layout_toStartOf="@+id/history_btn3"
+        android:background="@color/text_header"
+        app:layout_constraintEnd_toStartOf="@+id/history_btn"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/ic_baseline_home_24"
+        tools:ignore="UnknownIdInLayout" />
+
+    <include layout="@layout/appbar" android:id="@+id/appBar"/>
+
+    <LinearLayout
+        android:id="@+id/display_trans_header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/appBar"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginVertical="12dp">
+
+        <TextView
+            android:id="@+id/display_trans_cost"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins"
+            android:text="@string/display_trans_calculation"
+            android:textAlignment="textStart"
+            android:textColor="@color/headingOpt2"
+            android:textSize="30sp"
+            android:textStyle="bold" />
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginStart="12dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:background="@drawable/rounded_corners"
+                android:fontFamily="@font/poppins"
+                android:paddingHorizontal="5dp"
+                android:paddingVertical="2dp"
+                android:text="12/03/2023"
+                android:textColor="@color/headingMain"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+    </LinearLayout>
+
+
+    <TableLayout
+        android:id="@+id/dis_trans_cost_table"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="20dp"
+        android:layout_below="@id/display_trans_header"
+        android:background="@drawable/rounded_corners">
+
+        <!--table headers-->
+        <TableRow
+            android:background="@drawable/row_corners">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Description"
+                android:padding="10dp"
+                android:layout_weight="7"
+                android:gravity="center_horizontal"
+                android:textColor="@color/white"
+                android:fontFamily="@font/poppins"
+                android:textSize="20sp"/>
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Summery"
+                android:padding="10dp"
+                android:layout_weight="5"
+                android:gravity="center_horizontal"
+                android:textColor="@color/white"
+                android:fontFamily="@font/poppins"
+                android:textSize="20sp"/>
+        </TableRow>
+
+        <!--table data-->
+        <TableRow>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="5"
+                android:fontFamily="@font/poppins"
+                android:gravity="center_horizontal"
+                android:padding="10dp"
+                android:text="@string/trans_item_name"
+                android:textColor="@color/para_text"
+                android:textSize="18sp" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="5"
+                android:fontFamily="@font/poppins"
+                android:gravity="center_horizontal"
+                android:padding="10dp"
+                android:text="Tomato"
+                android:textColor="@color/para_text"
+                android:textSize="20sp" />
+        </TableRow>
+        <TableRow>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="5"
+                android:fontFamily="@font/poppins"
+                android:gravity="center_horizontal"
+                android:padding="10dp"
+                android:text="@string/trans_item_weight"
+                android:textColor="@color/para_text"
+                android:textSize="18sp" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="5"
+                android:fontFamily="@font/poppins"
+                android:gravity="center_horizontal"
+                android:padding="10dp"
+                android:text="50Kg"
+                android:textColor="@color/para_text"
+                android:textSize="20sp" />
+        </TableRow>
+        <TableRow/>
+        <TableRow/>
+        <TableRow>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="5"
+                android:fontFamily="@font/poppins"
+                android:gravity="center_horizontal"
+                android:padding="10dp"
+                android:text="@string/farm_item_history_expenses"
+                android:textColor="@color/para_text"
+                android:textSize="18sp" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="5"
+                android:fontFamily="@font/poppins"
+                android:gravity="center_horizontal"
+                android:padding="10dp"
+                android:text="Rs20000.00"
+                android:textColor="@color/para_text"
+                android:textSize="20sp" />
+        </TableRow>
+        <TableRow/>
+        <TableRow>
+
+            <Button
+                android:id="@+id/update_btn"
+                android:layout_width="30dp"
+                android:layout_marginHorizontal="18dp"
+                android:layout_weight="2"
+                android:backgroundTint="@color/backgroundOpt2"
+                android:fontFamily="@font/poppins"
+                android:gravity="center"
+                android:text="Edit Data"
+                android:textAllCaps="false"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+        </TableRow>
+
+
+    </TableLayout>
+    <LinearLayout
+        android:id="@+id/cost_summery"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:background="@drawable/rounded_corners"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginVertical="16dp"
+        android:paddingHorizontal="16dp"
+        android:paddingVertical="6dp"
+        android:layout_below="@id/dis_trans_cost_table">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins"
+            android:text="@string/farmer_cal_fun_text3"
+            android:textSize="24sp" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="4000.00LKR"
+            android:textColor="@color/headingMain"
+            android:textSize="28sp"
+            android:fontFamily="@font/poppins"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/cost_summery"
+        android:layout_marginHorizontal="20dp"
+        android:gravity="end">
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/ic_baseline_history_24"
+            android:text="History"
+
+            android:backgroundTint="@color/headingOpt1"
+            android:fontFamily="@font/poppins"
+            android:textSize="16sp"
+            android:textAllCaps="false"/>
+    </LinearLayout>
+
+</RelativeLayout>

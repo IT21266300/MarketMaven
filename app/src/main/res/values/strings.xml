@@ -1,10 +1,17 @@
 <resources>
+
+    <!--    common -->
     <string name="app_name">MarketMaven</string>
+
+    <!--    farm calculator -->
     <string name="farmer_cal_heading">Calculate Profit</string>
     <string name="farmer_cal_fun_text1">Enter Total Weight (kg):</string>
-    <string name="farmer_cal_fun_text2">Enter Total expenses (LKR):</string>
+    <string name="farmer_cal_fun_text2">Enter Total expenses (LKR)*:</string>
+    <string name="farmer_cal_fun_text2_hint">Enter Total expenses</string>
+    <string name="farmer_cal_fun_text4">Item Name:</string>
     <string name="farmer_cal_fun_text2.1">(*Not Mandatory)</string>
     <string name="farmer_cal_fun_text3">Your Profit is:</string>
+
     <string name="signup_head">Sign Up</string>
     <string name="signup_">Sign Up</string>
 
@@ -63,6 +70,22 @@
     <string name="trans_pickup_location">Pick-Up Location</string>
     <string name="trans_item_name">Item Name</string>
     <string name="trans_item_weight">Item Weight(Kg)</string>
+
+    <!--    select_farmer_items-->
+    <string name="farm_item_select">Pick Your Item</string>
+    <string name="farm_item_price_edit">Pick Item To edit price</string>
+    <string name="farm_item_price_edit_heading">Change Vegetables Buying price</string>
+
+    <!--    farmer_history-->
+    <string name="farm_item_history_expenses">Farming Expenses</string>
+    <string name="farm_item_history_heading">Farmer Profit Calculation History</string>
+
+
+
+
+
+
+
 
 
 </resources>

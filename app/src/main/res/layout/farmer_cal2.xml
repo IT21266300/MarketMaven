@@ -1,8 +1,39 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/backgroundMain">
+
+    <ImageButton
+        android:id="@+id/history_btn2"
+        tools:layout_editor_absoluteY="648dp"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="64dp"
+        android:layout_marginBottom="28dp"
+        android:background="@color/text_header"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/home_btn"
+        app:srcCompat="@drawable/ic_baseline_history_24" />
+
+    <ImageButton
+        android:id="@+id/home_btn2"
+        tools:layout_editor_absoluteY="649dp"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="66dp"
+        android:layout_marginBottom="28dp"
+        android:background="@color/text_header"
+        app:layout_constraintEnd_toStartOf="@+id/history_btn"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/ic_baseline_home_24" />
 
     <include layout="@layout/appbar" android:id="@+id/appBar"/>
 
@@ -36,7 +67,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="@font/poppins"
-            android:text="@string/item_name"
+            android:text="@string/farmer_cal_fun_text4"
             android:textColor="@color/headingOpt2"
             android:textSize="20sp"
             android:textStyle="bold" />
@@ -70,16 +101,17 @@
             android:layout_height="wrap_content"
             android:orientation="vertical"
             android:layout_marginBottom="12dp">
+
             <TextView
                 android:id="@+id/label_weight"
-                android:labelFor="@id/edt_weight"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textSize="20sp"
-                android:text="@string/item_weight"
                 android:fontFamily="@font/poppins"
+                android:labelFor="@id/edt_weight"
+                android:text="@string/farmer_cal_fun_text1"
                 android:textColor="@color/headingMain"
-                android:textStyle="bold"/>
+                android:textSize="20sp"
+                android:textStyle="bold" />
             <EditText
                 android:id="@+id/edt_weight"
                 android:layout_width="match_parent"
@@ -94,49 +126,32 @@
             android:layout_height="wrap_content"
             android:orientation="vertical"
             android:layout_marginBottom="12dp">
+
             <TextView
                 android:id="@+id/label_pickup"
-                android:labelFor="@id/edt_pickup"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textSize="20sp"
-                android:text="@string/pickup_location"
                 android:fontFamily="@font/poppins"
+                android:labelFor="@id/edt_pickup"
+                android:text="@string/farmer_cal_fun_text2"
                 android:textColor="@color/headingMain"
-                android:textStyle="bold"/>
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
             <EditText
                 android:id="@+id/edt_pickup"
                 android:layout_width="match_parent"
                 android:layout_height="48dp"
-                android:hint="@string/hint_pickup_location"
-                android:textSize="16sp"
+                android:hint="@string/farmer_cal_fun_text2_hint"
+                android:textColor="@color/para_text"
                 android:textColorHint="@color/headingOpt1"
-                android:textColor="@color/para_text"/>
+                android:textSize="16sp" />
         </LinearLayout>
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:layout_marginBottom="12dp">
-            <TextView
-                android:id="@+id/label_delivery"
-                android:labelFor="@id/edt_delivery"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textSize="20sp"
-                android:text="@string/delivery_location"
-                android:fontFamily="@font/poppins"
-                android:textColor="@color/headingMain"
-                android:textStyle="bold"/>
-            <EditText
-                android:id="@+id/edt_delivery"
-                android:layout_width="match_parent"
-                android:layout_height="48dp"
-                android:hint="@string/hint_delivery_location"
-                android:textSize="16sp"
-                android:textColorHint="@color/headingOpt1"
-                android:textColor="@color/para_text"/>
-        </LinearLayout>
+            android:layout_marginBottom="12dp"/>
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"

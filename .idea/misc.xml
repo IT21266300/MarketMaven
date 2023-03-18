@@ -7,13 +7,16 @@
         <entry key="..\:/Users/vihin/Documents/GitHub/MarketMaven/app/src/main/res/drawable/ic_baseline_home_24.xml" value="0.2265" />
         <entry key="..\:/Users/vihin/Documents/GitHub/MarketMaven/app/src/main/res/layout/activity_main.xml" value="0.13645833333333332" />
         <entry key="..\:/Users/vihin/Documents/GitHub/MarketMaven/app/src/main/res/layout/appbar.xml" value="0.10989583333333333" />
-        <entry key="..\:/Users/vihin/Documents/GitHub/MarketMaven/app/src/main/res/layout/dashboard.xml" value="0.13645833333333332" />
-        <entry key="..\:/Users/vihin/Documents/GitHub/MarketMaven/app/src/main/res/layout/displaytranscalculation.xml" value="0.13645833333333332" />
+        <entry key="..\:/Users/vihin/Documents/GitHub/MarketMaven/app/src/main/res/layout/dashboard.xml" value="0.264" />
+        <entry key="..\:/Users/vihin/Documents/GitHub/MarketMaven/app/src/main/res/layout/displaytranscalculation.xml" value="0.264" />
         <entry key="..\:/Users/vihin/Documents/GitHub/MarketMaven/app/src/main/res/layout/edit_veg_price.xml" value="0.25" />
         <entry key="..\:/Users/vihin/Documents/GitHub/MarketMaven/app/src/main/res/layout/farmer_cal.xml" value="0.264" />
         <entry key="..\:/Users/vihin/Documents/GitHub/MarketMaven/app/src/main/res/layout/farmer_cal2.xml" value="0.264" />
+        <entry key="..\:/Users/vihin/Documents/GitHub/MarketMaven/app/src/main/res/layout/farmer_sell_history.xml" value="0.264" />
         <entry key="..\:/Users/vihin/Documents/GitHub/MarketMaven/app/src/main/res/layout/farmer_veg_select.xml" value="0.22826086956521738" />
-        <entry key="..\:/Users/vihin/Documents/GitHub/MarketMaven/app/src/main/res/layout/historypage.xml" value="0.13645833333333332" />
+        <entry key="..\:/Users/vihin/Documents/GitHub/MarketMaven/app/src/main/res/layout/historypage.xml" value="0.264" />
+        <entry key="..\:/Users/vihin/Documents/GitHub/MarketMaven/app/src/main/res/layout/select_farm_veg.xml" value="0.21197916666666666" />
+        <entry key="..\:/Users/vihin/Documents/GitHub/MarketMaven/app/src/main/res/layout/select_trans_veg.xml" value="0.2109375" />
         <entry key="..\:/Users/vihin/Documents/GitHub/MarketMaven/app/src/main/res/layout/sign_up.xml" value="0.264" />
         <entry key="..\:/Users/vihin/Documents/GitHub/MarketMaven/app/src/main/res/layout/transalculate.xml" value="0.264" />
       </map>

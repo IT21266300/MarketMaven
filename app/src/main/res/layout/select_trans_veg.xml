@@ -11,16 +11,11 @@
 
     <TextView
         android:id="@+id/Transport_title"
-        android:layout_width="match_parent"
-        android:layout_height="115dp"
-        android:layout_above="@+id/null"
-        android:layout_below="@id/appBar"
-        android:layout_alignParentEnd="true"
-        android:layout_marginTop="30dp"
-        android:layout_marginEnd="0dp"
-        android:layout_marginBottom="41dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
         android:fontFamily="@font/poppins"
-        android:text="@string/farm_item_price_edit_heading"
+        android:text="@string/add_transport"
         android:textAlignment="center"
         android:textColor="@color/headingMain"
         android:textSize="34sp"
@@ -28,17 +23,17 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_below="@id/appBar"/>
 
     <TextView
         android:id="@+id/sub_pick"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/Transport_title"
-        android:layout_marginStart="24dp"
         android:layout_marginTop="5dp"
+        android:layout_marginStart="24dp"
         android:fontFamily="@font/lato"
-        android:text="@string/farm_item_price_edit"
+        android:text="Pick Your Item"
         android:textAlignment="center"
         android:textColor="@color/headingOpt2"
         android:textSize="24sp"
@@ -46,7 +41,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_below="@id/Transport_title"/>
 
     <GridLayout
         android:layout_width="match_parent"
