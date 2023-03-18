@@ -11,4 +11,14 @@
     <color name="text_header">#06BF69</color>
     <color name="text">#FF000000</color>
 
+
+    <color name="backgroundMain">#BBF2D8</color>
+    <color name="backgroundOpt1">#DFF2E9</color>
+    <color name="backgroundOpt2">#06BF69</color>
+    <color name="headingMain">#06BF69</color>
+    <color name="headingOpt1">#81878c</color>
+    <color name="headingOpt2">#333333</color>
+    <color name="para_text">#3D464D</color>
+
+
 </resources>

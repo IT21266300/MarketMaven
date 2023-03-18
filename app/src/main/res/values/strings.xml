@@ -9,4 +9,60 @@
     <string name="signup_">Sign Up</string>
 
 
+
+    <string name="transport_head">Transport</string>
+    <string name="add_transport">Calculate Transport Cost and profit</string>
+
+    <!--    common -->
+    <string name="transport_list">Transport List</string>
+    <string name="calculate_header">Calculate Transport Cost</string>
+    <string name="display_trans_calculation">Transport Cost</string>
+    <string name="trans_history">Transport History</string>
+
+    <!--    vegetables-->
+    <string name="beans">Beans</string>
+    <string name="carrots">Carrots</string>
+    <string name="potato">Potato</string>
+    <string name="tomato">Tomato</string>
+    <string name="beet">Beet</string>
+    <string name="leeks">Leeks</string>
+    <string name="cabbage">Cabbage</string>
+    <string name="cron">Cron</string>
+
+    <!--    fruits-->
+    <string name="mango">Mango</string>
+    <string name="graphs">Graphs</string>
+    <string name="avocado">Avocado</string>
+    <string name="banana">Banana</string>
+    <string name="waterMellon">Water Mellon</string>
+    <string name="guava">Guava</string>
+    <string name="papaya">Papaya</string>
+
+    <!--    transport calculation form-->
+    <string name="item_name">Item Name: </string>
+    <string name="item_weight">Item Weight(Kg) : </string>
+    <string name="pickup_location">Pick-Up Location: </string>
+    <string name="delivery_location">Delivery Location: </string>
+    <!--    placeholders-->
+    <string name="hint_delivery_location">Enter Delivery Location</string>
+    <string name="hint_pickup_location">Enter Pick-Up Location</string>
+    <string name="hint_item_name">Enter Item Name</string>
+    <string name="hint_item_weight">Enter Item Weight</string>
+    <!--    buttons-->
+    <string name="btn_calculate">Calculate</string>
+    <string name="btn_rest_calculate">Rest</string>
+
+    <!--    display_costs-->
+    <string name="trans_date">Date: </string>
+    <string name="trans_fuel_efficiency">Fuel Efficient</string>
+    <string name="trans_driver_wage">Driver Wage</string>
+    <string name="trans_fuel_price">Fuel Price</string>
+    <string name="trans_distance">Distance</string>
+    <string name="trans_total_cost">Total Cost</string>
+    <string name="trans_delivery_location">Delivery Location</string>
+    <string name="trans_pickup_location">Pick-Up Location</string>
+    <string name="trans_item_name">Item Name</string>
+    <string name="trans_item_weight">Item Weight(Kg)</string>
+
+
 </resources>

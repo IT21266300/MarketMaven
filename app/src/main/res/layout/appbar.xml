@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="?attr/actionBarSize"
+    android:background="@color/backgroundOpt2"
+    android:id="@+id/mainToolBar"
+    android:theme="@style/ThemeOverlay.AppCompat.Dark"
+    android:paddingVertical="5dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:gravity="center">
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_baseline_menu_24"
+            android:background="@color/backgroundOpt2"
+            android:layout_marginEnd="300dp"/>
+<!--        <ImageView-->
+<!--            android:layout_width="100dp"-->
+<!--            android:layout_height="100dp"-->
+<!--            android:src="@drawable/logo_b"-->
+<!--            android:layout_marginStart="10dp"-->
+<!--            android:layout_marginEnd="150dp"/>-->
+
+        <ImageView
+            android:id="@+id/my_imageview"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/profile"
+            android:background="@drawable/rounded_corners" />
+
+    </LinearLayout>
+
+
+
+</androidx.appcompat.widget.Toolbar>
