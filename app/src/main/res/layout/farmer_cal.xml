@@ -109,7 +109,8 @@
         app:layout_constraintEnd_toStartOf="@+id/autoCompleteTextView"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="544dp" />
+        tools:layout_editor_absoluteY="544dp"
+        tools:ignore="MissingConstraints" />
 
     <AutoCompleteTextView
         android:id="@+id/autoCompleteTextView"
@@ -120,7 +121,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/textView6"
-        tools:layout_editor_absoluteY="534dp" />
+        tools:layout_editor_absoluteY="534dp"
+        tools:ignore="MissingConstraints" />
 
     <Button
         android:id="@+id/button"
@@ -130,7 +132,8 @@
         android:text="Calculate "
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="433dp" />
+        tools:layout_editor_absoluteY="433dp"
+        tools:ignore="MissingConstraints" />
 
     <ImageButton
         android:id="@+id/home_btn"
@@ -141,7 +144,8 @@
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:srcCompat="@drawable/ic_baseline_home_24"
-        tools:layout_editor_absoluteY="649dp" />
+        tools:layout_editor_absoluteY="649dp"
+        tools:ignore="MissingConstraints" />
 
     <ImageButton
         android:id="@+id/history_btn"
@@ -152,6 +156,7 @@
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/home_btn"
         app:srcCompat="@drawable/ic_baseline_history_24"
-        tools:layout_editor_absoluteY="648dp" />
+        tools:layout_editor_absoluteY="648dp"
+        tools:ignore="MissingConstraints" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

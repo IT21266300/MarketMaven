@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/backgroundMain">
@@ -18,7 +19,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/home_btn"
-        app:srcCompat="@drawable/ic_baseline_history_24" />
+        app:srcCompat="@drawable/ic_baseline_history_24"
+        tools:ignore="UnknownIdInLayout" />
 
     <ImageButton
         android:id="@+id/home_btn2"
@@ -33,7 +35,8 @@
         app:layout_constraintEnd_toStartOf="@+id/history_btn"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@drawable/ic_baseline_home_24" />
+        app:srcCompat="@drawable/ic_baseline_home_24"
+        tools:ignore="UnknownIdInLayout" />
 
     <include layout="@layout/appbar" android:id="@+id/appBar"/>
 
@@ -165,22 +168,28 @@
             android:orientation="horizontal">
 
             <Button
-                android:layout_width="125dp"
+                android:layout_width="116dp"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="15dp"
                 android:backgroundTint="@color/para_text"
                 android:fontFamily="@font/poppins"
                 android:text="@string/btn_rest_calculate"
                 android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textColorHint="@color/white"
+                android:textColorLink="@color/white"
                 android:textSize="16sp" />
 
             <Button
-                android:layout_width="125dp"
+                android:layout_width="148dp"
                 android:layout_height="wrap_content"
                 android:backgroundTint="@color/backgroundOpt2"
                 android:fontFamily="@font/poppins"
                 android:text="@string/btn_calculate"
                 android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textColorHint="@color/white"
+                android:textColorLink="@color/white"
                 android:textSize="16sp" />
         </LinearLayout>
 

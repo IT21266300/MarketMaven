@@ -35,7 +35,8 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="16dp"
                 android:hint="Name"
-                android:textColorHint="@color/text"
+                android:textColor="@color/headingOpt1"
+                android:textColorHint="@color/headingOpt1"
                 android:textSize="20sp" />
 
             <TextView
@@ -52,7 +53,8 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="16dp"
                 android:hint="No."
-                android:textColorHint="@color/text"
+                android:textColor="@color/headingOpt1"
+                android:textColorHint="@color/headingOpt1"
                 android:textSize="20sp" />
 
             <EditText
@@ -61,7 +63,8 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="16dp"
                 android:hint="Lane"
-                android:textColorHint="@color/text"
+                android:textColor="@color/headingOpt1"
+                android:textColorHint="@color/headingOpt1"
                 android:textSize="20sp" />
 
             <EditText
@@ -70,7 +73,8 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="16dp"
                 android:hint="City"
-                android:textColorHint="@color/text"
+                android:textColor="@color/headingOpt1"
+                android:textColorHint="@color/headingOpt1"
                 android:textSize="20sp" />
 
             <EditText
@@ -79,7 +83,8 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="16dp"
                 android:hint="District"
-                android:textColorHint="@color/text"
+                android:textColor="@color/headingOpt1"
+                android:textColorHint="@color/headingOpt1"
                 android:textSize="20sp" />
 
             <TextView
@@ -102,6 +107,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Farmer"
+                    android:textColor="@color/black"
                     android:textColorHint="@color/text"
                     android:textSize="18sp" />
 
@@ -110,6 +116,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Transport"
+                    android:textColor="@color/black"
                     android:textColorHint="@color/text"
                     android:textSize="18sp" />
 
@@ -118,6 +125,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Seller"
+                    android:textColor="@color/black"
                     android:textColorHint="@color/text"
                     android:textSize="18sp" />
             </RadioGroup>
@@ -128,7 +136,8 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="16dp"
                 android:hint="Contact No."
-                android:textColorHint="@color/text"
+                android:textColor="@color/headingOpt1"
+                android:textColorHint="@color/headingOpt1"
                 android:textSize="20sp" />
 
             <EditText
@@ -138,7 +147,8 @@
                 android:layout_margin="16dp"
                 android:hint="Password"
                 android:inputType="textPassword"
-                android:textColorHint="@color/text"
+                android:textColor="@color/headingOpt1"
+                android:textColorHint="@color/headingOpt1"
                 android:textSize="20sp" />
 
             <EditText
@@ -147,7 +157,8 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="16dp"
                 android:hint="Confirm Password"
-                android:textColorHint="@color/text"
+                android:textColor="@color/headingOpt1"
+                android:textColorHint="@color/headingOpt1"
                 android:textSize="20sp" />
 
 

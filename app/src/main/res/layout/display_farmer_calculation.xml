@@ -8,7 +8,6 @@
 
     <ImageButton
         android:id="@+id/history_btn3"
-        tools:layout_editor_absoluteY="648dp"
         android:layout_width="80dp"
         android:layout_height="80dp"
         android:layout_alignParentEnd="true"
@@ -20,11 +19,11 @@
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/home_btn"
         app:srcCompat="@drawable/ic_baseline_history_24"
-        tools:ignore="UnknownIdInLayout" />
+        tools:ignore="UnknownIdInLayout,SpeakableTextPresentCheck"
+        tools:layout_editor_absoluteY="648dp" />
 
     <ImageButton
         android:id="@+id/home_btn3"
-        tools:layout_editor_absoluteY="649dp"
         android:layout_width="80dp"
         android:layout_height="80dp"
         android:layout_alignParentStart="true"
@@ -38,7 +37,8 @@
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:srcCompat="@drawable/ic_baseline_home_24"
-        tools:ignore="UnknownIdInLayout" />
+        tools:ignore="UnknownIdInLayout,SpeakableTextPresentCheck"
+        tools:layout_editor_absoluteY="649dp" />
 
     <include layout="@layout/appbar" android:id="@+id/appBar"/>
 
@@ -213,33 +213,34 @@
 
 
     </TableLayout>
+
     <LinearLayout
         android:id="@+id/cost_summery"
-        android:layout_width="match_parent"
+        android:layout_width="383dp"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:gravity="center_vertical"
-        android:background="@drawable/rounded_corners"
+        android:layout_below="@id/dis_trans_cost_table"
         android:layout_marginHorizontal="20dp"
         android:layout_marginVertical="16dp"
+        android:background="@drawable/rounded_corners"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
         android:paddingHorizontal="16dp"
-        android:paddingVertical="6dp"
-        android:layout_below="@id/dis_trans_cost_table">
+        android:paddingVertical="6dp">
 
         <TextView
-            android:layout_width="wrap_content"
+            android:layout_width="183dp"
             android:layout_height="wrap_content"
             android:fontFamily="@font/poppins"
             android:text="@string/farmer_cal_fun_text3"
             android:textSize="24sp" />
 
         <TextView
-            android:layout_width="wrap_content"
+            android:layout_width="176dp"
             android:layout_height="wrap_content"
             android:fontFamily="@font/poppins"
             android:text="Rs. 40000.00"
             android:textColor="@color/headingMain"
-            android:textSize="28sp" />
+            android:textSize="24sp" />
     </LinearLayout>
     <LinearLayout
         android:layout_width="match_parent"

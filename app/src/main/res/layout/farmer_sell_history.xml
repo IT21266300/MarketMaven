@@ -91,9 +91,9 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/poppins"
-                        android:text="75000.00LKR"
+                        android:text="Rs.75000.00"
                         android:textColor="@color/headingMain"
-                        android:textSize="26sp" />
+                        android:textSize="24sp" />
                 </LinearLayout>
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -159,13 +159,13 @@
                         android:fontFamily="@font/poppins"
                         android:text="@string/farm_item_history_expenses"
                         android:textColor="@color/headingOpt2"
-                        android:textSize="20sp" />
+                        android:textSize="18sp" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/poppins"
-                        android:text="Rs.35000.00"
+                        android:text=": Rs.35000.00"
                         android:textColor="@color/headingMain"
                         android:textSize="20sp" />
                 </LinearLayout>
@@ -289,9 +289,9 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/poppins"
-                        android:text="125000.00LKR"
+                        android:text="Rs.125000.00"
                         android:textColor="@color/headingMain"
-                        android:textSize="26sp" />
+                        android:textSize="24sp" />
                 </LinearLayout>
 
                 <LinearLayout
