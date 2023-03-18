@@ -57,11 +57,12 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="@font/poppins"
-            android:text="@string/display_trans_calculation"
+            android:text="@string/farmer_cal_display_Profit"
             android:textAlignment="textStart"
             android:textColor="@color/headingOpt2"
-            android:textSize="30sp"
+            android:textSize="28sp"
             android:textStyle="bold" />
+
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -76,7 +77,7 @@
                 android:fontFamily="@font/poppins"
                 android:paddingHorizontal="5dp"
                 android:paddingVertical="2dp"
-                android:text="12/03/2023"
+                android:text="17/01/2023"
                 android:textColor="@color/headingMain"
                 android:textSize="20sp"
                 android:textStyle="bold" />
@@ -162,7 +163,7 @@
                 android:fontFamily="@font/poppins"
                 android:gravity="center_horizontal"
                 android:padding="10dp"
-                android:text="50Kg"
+                android:text="500Kg"
                 android:textColor="@color/para_text"
                 android:textSize="20sp" />
         </TableRow>
@@ -231,30 +232,20 @@
             android:fontFamily="@font/poppins"
             android:text="@string/farmer_cal_fun_text3"
             android:textSize="24sp" />
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="4000.00LKR"
+            android:fontFamily="@font/poppins"
+            android:text="Rs. 40000.00"
             android:textColor="@color/headingMain"
-            android:textSize="28sp"
-            android:fontFamily="@font/poppins"/>
+            android:textSize="28sp" />
     </LinearLayout>
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/cost_summery"
         android:layout_marginHorizontal="20dp"
-        android:gravity="end">
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:drawableLeft="@drawable/ic_baseline_history_24"
-            android:text="History"
-
-            android:backgroundTint="@color/headingOpt1"
-            android:fontFamily="@font/poppins"
-            android:textSize="16sp"
-            android:textAllCaps="false"/>
-    </LinearLayout>
+        android:gravity="end"/>
 
 </RelativeLayout>

@@ -206,13 +206,6 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:backgroundTint="@color/backgroundOpt2"
-                            android:src="@drawable/ic_baseline_update_24"
-                            tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
-
-                        <ImageButton
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:backgroundTint="@color/backgroundOpt2"
                             android:src="@drawable/ic_baseline_delete_forever_24"
                             tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
                     </LinearLayout>
@@ -355,13 +348,6 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="150dp">
-
-                        <ImageButton
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:backgroundTint="@color/backgroundOpt2"
-                            android:src="@drawable/ic_baseline_update_24"
-                            tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
 
                         <ImageButton
                             android:layout_width="wrap_content"

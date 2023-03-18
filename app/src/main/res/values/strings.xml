@@ -4,16 +4,33 @@
     <string name="app_name">MarketMaven</string>
 
     <!--    farm calculator -->
-    <string name="farmer_cal_heading">Calculate Profit</string>
+    <string name="farmer_cal_heading">Calculate Farming Profit</string>
     <string name="farmer_cal_fun_text1">Enter Total Weight (kg):</string>
     <string name="farmer_cal_fun_text2">Enter Total expenses (LKR)*:</string>
     <string name="farmer_cal_fun_text2_hint">Enter Total expenses</string>
     <string name="farmer_cal_fun_text4">Item Name:</string>
     <string name="farmer_cal_fun_text2.1">(*Not Mandatory)</string>
     <string name="farmer_cal_fun_text3">Your Profit is:</string>
+    <string name="farmer_cal_display_Profit">Farmer Profit</string>
 
+    <!--    Sign_Up -->
     <string name="signup_head">Sign Up</string>
-    <string name="signup_">Sign Up</string>
+    <string name="signup_name">Name</string>
+    <string name="signup_address">Address</string>
+    <string name="signup_address_no">No</string>
+    <string name="signup_address_lane">Lane</string>
+    <string name="signup_address_city">City</string>
+    <string name="signup_address_district">District</string>
+    <string name="signup_User_type">User Type</string>
+    <string name="signup_User_type_Farmer">Farmer</string>
+    <string name="signup_User_type_transport">Transport</string>
+    <string name="signup_User_type_seller">Seller</string>
+    <string name="signup_User_contact">Contact No</string>
+    <string name="signup_User_pass">Password</string>
+    <string name="signup_User_com_pass">Confirm Password</string>
+
+
+
 
 
 

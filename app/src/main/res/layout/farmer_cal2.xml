@@ -38,14 +38,14 @@
     <include layout="@layout/appbar" android:id="@+id/appBar"/>
 
     <TextView
-        android:id="@+id/trans_cal_header"
+        android:id="@+id/farm_cal_header"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/appBar"
         android:layout_marginHorizontal="34dp"
         android:layout_marginVertical="10dp"
         android:fontFamily="@font/poppins"
-        android:text="@string/calculate_header"
+        android:text="@string/farmer_cal_heading"
         android:textAlignment="center"
         android:textColor="@color/headingOpt2"
         android:textSize="30sp"
@@ -57,7 +57,7 @@
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="34dp"
         android:paddingVertical="10dp"
-        android:layout_below="@+id/trans_cal_header"
+        android:layout_below="@+id/farm_cal_header"
         android:background="@drawable/rounded_corners"
         android:paddingHorizontal="12sp"
         android:gravity="center"
@@ -86,21 +86,22 @@
         android:id="@+id/cal_form"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_below="@+id/item_abt"
         android:layout_marginHorizontal="34dp"
         android:layout_marginVertical="16dp"
-        android:paddingVertical="20dp"
-        android:layout_below="@+id/item_abt"
+        android:layout_marginTop="16dp"
         android:background="@drawable/rounded_corners"
-        android:paddingHorizontal="12sp"
+        android:elevation="8dp"
         android:gravity="center"
         android:orientation="vertical"
-        android:elevation="8dp">
+        android:paddingHorizontal="12sp"
+        android:paddingVertical="20dp">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:layout_marginBottom="12dp">
+            android:layout_marginBottom="12dp"
+            android:orientation="vertical">
 
             <TextView
                 android:id="@+id/label_weight"
@@ -112,20 +113,22 @@
                 android:textColor="@color/headingMain"
                 android:textSize="20sp"
                 android:textStyle="bold" />
+
             <EditText
                 android:id="@+id/edt_weight"
                 android:layout_width="match_parent"
                 android:layout_height="48dp"
                 android:hint="@string/hint_item_weight"
-                android:textSize="16sp"
+                android:textColor="@color/para_text"
                 android:textColorHint="@color/headingOpt1"
-                android:textColor="@color/para_text"/>
+                android:textSize="16sp" />
         </LinearLayout>
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:layout_marginBottom="12dp">
+            android:layout_marginBottom="12dp"
+            android:orientation="vertical">
 
             <TextView
                 android:id="@+id/label_pickup"
@@ -147,42 +150,48 @@
                 android:textColorHint="@color/headingOpt1"
                 android:textSize="16sp" />
         </LinearLayout>
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:layout_marginBottom="12dp"/>
+            android:layout_marginBottom="12dp"
+            android:orientation="vertical" />
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="horizontal"
             android:layout_marginBottom="12dp"
-            android:gravity="center_horizontal">
+            android:gravity="center_horizontal"
+            android:orientation="horizontal">
+
             <Button
                 android:layout_width="125dp"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="15dp"
-                android:text="@string/btn_rest_calculate"
                 android:backgroundTint="@color/para_text"
                 android:fontFamily="@font/poppins"
-                android:textSize="16sp"
-                android:textAllCaps="false"/>
+                android:text="@string/btn_rest_calculate"
+                android:textAllCaps="false"
+                android:textSize="16sp" />
+
             <Button
                 android:layout_width="125dp"
                 android:layout_height="wrap_content"
-                android:text="@string/btn_calculate"
                 android:backgroundTint="@color/backgroundOpt2"
                 android:fontFamily="@font/poppins"
-                android:textSize="16sp"
-                android:textAllCaps="false"/>
+                android:text="@string/btn_calculate"
+                android:textAllCaps="false"
+                android:textSize="16sp" />
         </LinearLayout>
 
-
-
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/farmer_cal_fun_text2.1" />
 
 
     </LinearLayout>
-
 
 
 </RelativeLayout>

@@ -35,7 +35,8 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="16dp"
                 android:hint="Name"
-                android:textColorHint="@color/text" />
+                android:textColorHint="@color/text"
+                android:textSize="20sp" />
 
             <TextView
                 android:layout_width="match_parent"
@@ -43,7 +44,7 @@
                 android:layout_marginLeft="16dp"
                 android:text="Address"
                 android:textColor="@color/text"
-                android:textSize="20sp" />
+                android:textSize="22sp" />
 
             <EditText
                 android:id="@+id/editTextAddressNo"
@@ -51,7 +52,8 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="16dp"
                 android:hint="No."
-                android:textColorHint="@color/text" />
+                android:textColorHint="@color/text"
+                android:textSize="20sp" />
 
             <EditText
                 android:id="@+id/editTextAddressLane"
@@ -59,7 +61,8 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="16dp"
                 android:hint="Lane"
-                android:textColorHint="@color/text" />
+                android:textColorHint="@color/text"
+                android:textSize="20sp" />
 
             <EditText
                 android:id="@+id/editTextAddressCity"
@@ -67,7 +70,8 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="16dp"
                 android:hint="City"
-                android:textColorHint="@color/text" />
+                android:textColorHint="@color/text"
+                android:textSize="20sp" />
 
             <EditText
                 android:id="@+id/editTextAddressDistrict"
@@ -75,7 +79,8 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="16dp"
                 android:hint="District"
-                android:textColorHint="@color/text" />
+                android:textColorHint="@color/text"
+                android:textSize="20sp" />
 
             <TextView
                 android:layout_width="match_parent"
@@ -97,21 +102,24 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Farmer"
-                    android:textColorHint="@color/text" />
+                    android:textColorHint="@color/text"
+                    android:textSize="18sp" />
 
                 <RadioButton
                     android:id="@+id/radioButtonTransport"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Transport"
-                    android:textColorHint="@color/text" />
+                    android:textColorHint="@color/text"
+                    android:textSize="18sp" />
 
                 <RadioButton
                     android:id="@+id/radioButtonSeller"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Seller"
-                    android:textColorHint="@color/text" />
+                    android:textColorHint="@color/text"
+                    android:textSize="18sp" />
             </RadioGroup>
 
             <EditText
@@ -120,7 +128,8 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="16dp"
                 android:hint="Contact No."
-                android:textColorHint="@color/text" />
+                android:textColorHint="@color/text"
+                android:textSize="20sp" />
 
             <EditText
                 android:id="@+id/editTextPassword"
@@ -129,7 +138,8 @@
                 android:layout_margin="16dp"
                 android:hint="Password"
                 android:inputType="textPassword"
-                android:textColorHint="@color/text" />
+                android:textColorHint="@color/text"
+                android:textSize="20sp" />
 
             <EditText
                 android:id="@+id/editTextConfirmPassword"
@@ -137,7 +147,8 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="16dp"
                 android:hint="Confirm Password"
-                android:textColorHint="@color/text" />
+                android:textColorHint="@color/text"
+                android:textSize="20sp" />
 
 
             <Button
