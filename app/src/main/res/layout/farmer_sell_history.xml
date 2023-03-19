@@ -85,7 +85,8 @@
                         android:fontFamily="@font/poppins"
                         android:text="@string/farmer_cal_fun_text3"
                         android:textColor="@color/headingOpt2"
-                        android:textSize="20sp" />
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -93,7 +94,8 @@
                         android:fontFamily="@font/poppins"
                         android:text="Rs.75000.00"
                         android:textColor="@color/headingMain"
-                        android:textSize="24sp" />
+                        android:textSize="24sp"
+                        android:textStyle="bold" />
                 </LinearLayout>
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -283,7 +285,8 @@
                         android:fontFamily="@font/poppins"
                         android:text="@string/farmer_cal_fun_text3"
                         android:textColor="@color/headingOpt2"
-                        android:textSize="20sp" />
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -291,7 +294,8 @@
                         android:fontFamily="@font/poppins"
                         android:text="Rs.125000.00"
                         android:textColor="@color/headingMain"
-                        android:textSize="24sp" />
+                        android:textSize="24sp"
+                        android:textStyle="bold" />
                 </LinearLayout>
 
                 <LinearLayout

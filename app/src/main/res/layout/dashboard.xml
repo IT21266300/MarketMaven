@@ -4,17 +4,31 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="@color/backgroundMain">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
     <include layout="@layout/appbar" android:id="@+id/appBar"/>
 
-    <ImageView
-        android:id="@+id/main_logo"
-        android:layout_width="wrap_content"
-        android:layout_height="100dp"
-        android:src="@drawable/logo"
-        android:layout_below="@id/appBar"/>
+            <ImageView
+                android:id="@+id/main_logo"
+                android:layout_width="wrap_content"
+                android:layout_height="136dp"
+                android:layout_below="@id/appBar"
+                android:src="@drawable/logo" />
 
-    <GridLayout
+            <ImageView
+                android:id="@+id/dashboard_poster"
+                android:layout_width="wrap_content"
+                android:layout_height="616dp"
+                android:layout_below="@id/main_logo"
+                android:src="@drawable/dashboard" />
+
+            <GridLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/main_logo"
@@ -113,5 +127,9 @@
 
 
     </GridLayout>
+
+
+        </LinearLayout>
+    </ScrollView>
 
 </RelativeLayout>
