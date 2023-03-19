@@ -168,7 +168,8 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="16dp"
                 android:backgroundTint="@color/text_header"
-                android:text="Submit" />
+                android:text="Submit"
+                android:textColor="@color/white" />
 
             <Button
                 android:id="@+id/buttonCancel"
@@ -176,7 +177,8 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="16dp"
                 android:backgroundTint="@color/text_header"
-                android:text="Cancel" />
+                android:text="Cancel"
+                android:textColor="@color/white" />
         </LinearLayout>
     </ScrollView>
 
