@@ -4,6 +4,8 @@
     android:layout_height="match_parent"
     android:background="#BBF2D8">
 
+
+
     <TextView
         android:id="@+id/title"
         android:layout_width="match_parent"
@@ -22,7 +24,7 @@
 
     <LinearLayout
         android:layout_width="wrap_content"
-        android:layout_height="369dp"
+        android:layout_height="271dp"
         android:layout_below="@+id/title"
         android:layout_alignStart="@+id/title"
         android:layout_alignParentEnd="true"
@@ -40,26 +42,29 @@
             android:paddingBottom="8dp"
             android:text="@string/item_name1"
             android:textColor="@color/backgroundOpt2"
-            android:textSize="16sp"
+            android:textSize="24sp"
             android:textStyle="bold" />
 
-        <EditText
-            android:id="@+id/selling_item_name1_edit"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:backgroundTint="@color/backgroundOpt1"
-            android:hint="@string/hint_item_name1"
-            android:textColor="@color/headingOpt1"
-            android:textSize="16sp" />
+
+        <Spinner
+            android:id="@+id/my_spinner"
+            android:layout_width="340dp"
+            android:layout_height="42dp"
+            android:backgroundTint="@color/black"
+            android:dropDownSelector="@color/black"
+            android:hint="@string/tomato"
+            android:scrollbarThumbVertical="@color/black"
+            android:textColor="@color/black"
+            android:textSize="20sp" />
 
         <TextView
             android:id="@+id/selling_item_weight1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:paddingBottom="8dp"
-            android:text="@string/item_weight1"
+            android:text="New Price"
             android:textColor="@color/backgroundOpt2"
-            android:textSize="16sp"
+            android:textSize="24sp"
             android:textStyle="bold" />
 
         <EditText
@@ -69,7 +74,7 @@
             android:backgroundTint="@color/backgroundOpt1"
             android:hint="@string/hint_item_weight1"
             android:textColor="@color/headingOpt1"
-            android:textSize="16sp" />
+            android:textSize="20sp" />
 
         <Button
             android:id="@+id/insert_button"
@@ -78,7 +83,8 @@
             android:layout_marginTop="@dimen/button_layout_margin_top"
             android:backgroundTint="@color/backgroundOpt2"
             android:text="@string/btn_update"
-            android:textColor="@color/white" />
+            android:textColor="@color/white"
+            android:textSize="20sp" />
 
     </LinearLayout>
 
