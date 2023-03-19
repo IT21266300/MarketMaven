@@ -233,6 +233,7 @@
             android:layout_height="wrap_content"
             android:fontFamily="@font/poppins"
             android:text="@string/farmer_cal_fun_text3"
+            android:textColor="@color/black"
             android:textSize="24sp" />
 
         <TextView

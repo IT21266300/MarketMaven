@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/backgroundMain"
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/item_cost_history_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="38dp"
+        android:layout_marginBottom="16dp"
+        android:text="@string/item_cost_history"
+        android:textAlignment="center"
+        android:textColor="@color/para_text"
+        android:textSize="30sp"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:layout_width="392dp"
+        android:layout_height="577dp"
+        android:layout_below="@+id/item_cost_history_title"
+        android:layout_alignStart="@+id/item_cost_history_title"
+        android:layout_alignEnd="@+id/item_cost_history_title"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginEnd="0dp"
+        android:layout_marginBottom="57dp"
+        android:background="@drawable/rounded_corners"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <TextView
+            android:id="@+id/history_item_name2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingBottom="8dp"
+            android:text="@string/item_name1"
+            android:textColor="@color/backgroundOpt2"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/history_item_name2_edit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/backgroundOpt1"
+            android:hint="@string/hint_item_name2"
+            android:textColor="@color/para_text"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/history_item_weight2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingBottom="8dp"
+            android:text="@string/item_weight2"
+            android:textColor="@color/backgroundOpt2"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/history_item_weight2_edit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/backgroundOpt1"
+            android:hint="@string/hint_item_weight2"
+            android:textColor="@color/para_text"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/history_item_distance2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingBottom="8dp"
+            android:text="@string/transport_distance1"
+            android:textColor="@color/backgroundOpt2"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/history_item_distance2_edit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/backgroundOpt1"
+            android:hint="@string/hint_transport_distance2"
+            android:textColor="@color/para_text"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/history_item_buyprice2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingBottom="8dp"
+            android:text="@string/buying_price1"
+            android:textColor="@color/backgroundOpt2"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/history_item_buyprice2_edit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/backgroundOpt1"
+            android:hint="@string/buying_price2"
+            android:textColor="@color/para_text"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/history_item_selprice2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingBottom="8dp"
+            android:text="@string/selling_price1"
+            android:textColor="@color/backgroundOpt2"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/history_item_selprice2_edit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/backgroundOpt1"
+            android:hint="@string/hint_selling_price2"
+            android:textColor="@color/para_text"
+            android:textSize="16sp" />
+
+        <Button
+            android:id="@+id/update_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/button_layout_margin_top"
+            android:backgroundTint="@color/backgroundOpt2"
+            android:text="@string/btn_update"
+            android:textColor="@color/white" />
+
+        <Button
+            android:id="@+id/delete_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/button_layout_margin_top"
+            android:backgroundTint="@color/headingOpt1"
+            android:text="@string/btn_delete"
+            android:textColor="@color/white" />
+    </LinearLayout>
+
+</RelativeLayout>
+

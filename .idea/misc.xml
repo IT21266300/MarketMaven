@@ -3,9 +3,16 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/vihin/Documents/GitHub/MarketMaven/app/src/main/res/drawable/dashboard_farmer.xml" value="0.14" />
         <entry key="..\:/Users/vihin/Documents/GitHub/MarketMaven/app/src/main/res/drawable/ic_baseline_history_24.xml" value="0.197" />
         <entry key="..\:/Users/vihin/Documents/GitHub/MarketMaven/app/src/main/res/drawable/ic_baseline_home_24.xml" value="0.2265" />
+        <entry key="..\:/Users/vihin/Documents/GitHub/MarketMaven/app/src/main/res/drawable/ic_baseline_update_24.xml" value="0.14" />
+        <entry key="..\:/Users/vihin/Documents/GitHub/MarketMaven/app/src/main/res/layout/activity_calculate_cost.xml" value="0.2" />
+        <entry key="..\:/Users/vihin/Documents/GitHub/MarketMaven/app/src/main/res/layout/activity_itemcost_history.xml" value="0.264" />
         <entry key="..\:/Users/vihin/Documents/GitHub/MarketMaven/app/src/main/res/layout/activity_main.xml" value="0.1" />
+        <entry key="..\:/Users/vihin/Documents/GitHub/MarketMaven/app/src/main/res/layout/activity_profile.xml" value="0.264" />
+        <entry key="..\:/Users/vihin/Documents/GitHub/MarketMaven/app/src/main/res/layout/activity_reset_password.xml" value="0.264" />
+        <entry key="..\:/Users/vihin/Documents/GitHub/MarketMaven/app/src/main/res/layout/activity_selling_item.xml" value="0.264" />
         <entry key="..\:/Users/vihin/Documents/GitHub/MarketMaven/app/src/main/res/layout/appbar.xml" value="0.10989583333333333" />
         <entry key="..\:/Users/vihin/Documents/GitHub/MarketMaven/app/src/main/res/layout/dashboard.xml" value="0.22878228782287824" />
         <entry key="..\:/Users/vihin/Documents/GitHub/MarketMaven/app/src/main/res/layout/display_farmer_calculation.xml" value="0.264" />

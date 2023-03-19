@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/backgroundMain"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/cal_topic"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="34dp"
+        android:layout_marginVertical="10dp"
+        android:layout_marginTop="38dp"
+        android:paddingHorizontal="12sp"
+        android:text="@string/cal_selling_price"
+        android:textAlignment="center"
+        android:textColor="@color/headingOpt2"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="326dp"
+        android:layout_height="117dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/rounded_corners"
+        android:orientation="vertical"
+        android:padding="16dp"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout2"
+        app:layout_constraintEnd_toEndOf="@+id/cal_topic"
+        app:layout_constraintStart_toStartOf="@+id/cal_topic"
+        app:layout_constraintTop_toBottomOf="@+id/cal_topic"
+        app:layout_constraintVertical_bias="0.5">
+
+        <TextView
+            android:id="@+id/sel_item_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingBottom="8dp"
+            android:text="@string/item_name1"
+            android:textColor="@color/backgroundOpt2"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/sel_item_name_edit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:backgroundTint="@color/backgroundOpt1"
+            android:hint="@string/hint_item_name1"
+            android:textColor="@color/para_text"
+            android:textCursorDrawable="@color/headingOpt2"
+            android:textSize="16sp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="307dp"
+        android:layout_height="374dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/rounded_corners"
+        android:orientation="vertical"
+        android:padding="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/linearLayout"
+        app:layout_constraintStart_toStartOf="@+id/linearLayout"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+        app:layout_constraintVertical_bias="0.5">
+
+
+        <TextView
+            android:id="@+id/sel_item_weight"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingBottom="8dp"
+            android:text="@string/item_weight"
+            android:textColor="@color/backgroundOpt2"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/sel_item_weight_edit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/backgroundOpt1"
+            android:hint="@string/hint_item_weight"
+            android:textColor="@color/para_text"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/sel_item_distance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingBottom="8dp"
+            android:text="@string/transport_distance"
+            android:textColor="@color/backgroundOpt2"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/sel_item_distance_edit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/backgroundOpt1"
+            android:hint="@string/hint_transport_distance"
+            android:textColor="@color/para_text"
+            android:textSize="16sp" />
+
+        <Button
+            android:id="@+id/button_calculate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/backgroundOpt2"
+            android:text="@string/btn_calculate"
+            android:textColor="@color/white" />
+
+        <TextView
+            android:id="@+id/sel_item_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingBottom="8dp"
+            android:text="@string/selling_price"
+            android:textColor="@color/backgroundOpt2"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/sel_item_distance_editt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/backgroundOpt1"
+            android:hint="@string/hint_selling_price"
+            android:textColor="@color/para_text"
+            android:textSize="16sp" />
+
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
