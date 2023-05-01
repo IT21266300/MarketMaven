@@ -164,11 +164,7 @@
 
     <string name="btn_delete">Delete</string>
     <string name="btn_update">Update</string>
-
-
-
-
-
+    <string name="sign_up">Sign-Up</string>
 
 
 </resources>

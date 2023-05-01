@@ -181,6 +181,7 @@
                 android:textSize="16sp" />
 
             <Button
+                android:id="@+id/btnFarmCalculate"
                 android:layout_width="148dp"
                 android:layout_height="wrap_content"
                 android:backgroundTint="@color/backgroundOpt2"
