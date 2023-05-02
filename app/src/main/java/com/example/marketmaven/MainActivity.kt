@@ -19,7 +19,7 @@ class MainActivity : AppCompatActivity() {
         btnFarmCalculate = findViewById(R.id.btnFarmCalculate)
 
         btnFarmCalculate.setOnClickListener {
-            val intent = Intent(this, FamCalInsertionActivity::class.java)
+            val intent = Intent(this, FamCalInsert::class.java)
             startActivity(intent)
         }
 
