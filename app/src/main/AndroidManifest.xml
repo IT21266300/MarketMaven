@@ -13,6 +13,21 @@
         android:theme="@style/Theme.MarketMaven"
         tools:targetApi="31">
         <activity
+            android:name=".CalculateTransport"
+            android:exported="false" />
+        <activity
+            android:name=".TransportData"
+            android:exported="false" />
+        <activity
+            android:name=".TransportHistory"
+            android:exported="false" />
+        <activity
+            android:name=".ItemList"
+            android:exported="false" />
+        <activity
+            android:name=".TransportDashboard"
+            android:exported="false" />
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>

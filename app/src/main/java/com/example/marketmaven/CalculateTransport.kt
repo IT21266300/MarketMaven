@@ -1,4 +1,4 @@
-package com.example.mad
+package com.example.marketmaven
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -42,7 +42,6 @@ class CalculateTransport : AppCompatActivity() {
 
     }
 
-
     private fun saveTransportData(){
         val transItem = itemName.text.toString()
         val transItemWeight = itemWeight.text.toString()
@@ -62,5 +61,7 @@ class CalculateTransport : AppCompatActivity() {
         }.addOnFailureListener{ err ->
             Toast.makeText(this, "Error ${err.message}", Toast.LENGTH_LONG).show()
         }
+
     }
+
 }
