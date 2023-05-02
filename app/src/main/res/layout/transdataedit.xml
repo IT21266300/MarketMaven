@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/backgroundOpt1">
+
+    <include layout="@layout/appbar" android:id="@+id/appBar"/>
+
+    <TextView
+        android:id="@+id/Transport_prices"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:fontFamily="@font/poppins"
+        android:text="@string/trans_prices"
+        android:textAlignment="center"
+        android:textColor="@color/headingMain"
+        android:textSize="34sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_below="@id/appBar"/>
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/dis_trans_cost_table"
+        android:layout_marginHorizontal="20dp"
+        android:layout_below="@id/Transport_prices"
+        android:background="@drawable/rounded_corners">
+
+        <TableRow
+            android:background="@drawable/row_corners">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Description"
+                android:padding="10dp"
+                android:layout_weight="5"
+                android:gravity="center_horizontal"
+                android:textColor="@color/white"
+                android:fontFamily="@font/poppins"
+                android:textSize="20sp"/>
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Price(LKR)"
+                android:padding="10dp"
+                android:layout_weight="4"
+                android:gravity="center_horizontal"
+                android:textColor="@color/white"
+                android:fontFamily="@font/poppins"
+                android:textSize="20sp"/>
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Action"
+                android:padding="10dp"
+                android:layout_weight="3"
+                android:gravity="center_horizontal"
+                android:textColor="@color/white"
+                android:fontFamily="@font/poppins"
+                android:textSize="20sp"/>
+        </TableRow>
+        <TableRow>
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/edit_fuel_price"
+                android:padding="10dp"
+                android:layout_weight="5"
+                android:gravity="center_horizontal"
+                android:textColor="@color/para_text"
+                android:fontFamily="@font/poppins"
+                android:textSize="16sp"/>
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="320.80/liter"
+                android:padding="10dp"
+                android:layout_weight="4"
+                android:gravity="center_horizontal"
+                android:textColor="@color/para_text"
+                android:fontFamily="@font/poppins"
+                android:textSize="16sp"/>
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="match_parent"
+                android:src="@drawable/ic_baseline_update_2_24"
+                android:layout_weight="3" />
+        </TableRow>
+        <TableRow>
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/edit_driver_wage"
+                android:padding="10dp"
+                android:layout_weight="5"
+                android:gravity="center_horizontal"
+                android:textColor="@color/para_text"
+                android:fontFamily="@font/poppins"
+                android:textSize="16sp"/>
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="1600.00"
+                android:padding="10dp"
+                android:layout_weight="4"
+                android:gravity="center_horizontal"
+                android:textColor="@color/para_text"
+                android:fontFamily="@font/poppins"
+                android:textSize="16sp"/>
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="match_parent"
+                android:src="@drawable/ic_baseline_update_2_24"
+                android:layout_weight="3" />
+        </TableRow>
+
+    </TableLayout>
+
+</RelativeLayout>

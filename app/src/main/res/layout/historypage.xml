@@ -18,9 +18,9 @@
         android:fontFamily="@font/poppins"
         android:text="@string/trans_history"
         android:textAlignment="center"
-        android:textColor="@color/headingOpt2"
+        android:textColor="@color/headingMain"
         android:textSize="30sp"
-        android:textStyle="bold"/>
+        android:textStyle="bold" />
 
     <GridLayout
         android:layout_width="match_parent"

@@ -15,16 +15,17 @@
         android:gravity="center_vertical"
         android:layout_marginHorizontal="20dp"
         android:layout_marginVertical="12dp">
+
         <TextView
             android:id="@+id/display_trans_cost"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="@font/poppins"
             android:text="@string/display_trans_calculation"
-            android:textColor="@color/headingOpt2"
+            android:textAlignment="textStart"
+            android:textColor="@color/headingMain"
             android:textSize="26sp"
-            android:textStyle="bold"
-            android:textAlignment="textStart"/>
+            android:textStyle="bold" />
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
