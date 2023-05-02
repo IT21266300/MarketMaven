@@ -96,7 +96,7 @@
             android:layout_marginBottom="12dp">
             <TextView
                 android:id="@+id/label_pickup"
-                android:labelFor="@id/edt_pickup"
+                android:labelFor="@id/edt_total_expens"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textSize="20sp"
@@ -105,7 +105,7 @@
                 android:textColor="@color/headingMain"
                 android:textStyle="bold"/>
             <EditText
-                android:id="@+id/edt_pickup"
+                android:id="@+id/edt_total_expens"
                 android:layout_width="match_parent"
                 android:layout_height="48dp"
                 android:hint="@string/hint_pickup_location"

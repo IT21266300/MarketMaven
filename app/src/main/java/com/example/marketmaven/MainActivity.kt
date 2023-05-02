@@ -10,18 +10,20 @@ import com.google.firebase.database.FirebaseDatabase
 
 class MainActivity : AppCompatActivity() {
 
-    private lateinit var btnFarmCalculate: Button
+    private  lateinit var btnCalFarmer: Button
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.farmer_cal2)
+        setContentView(R.layout.activity_farmer_dash)
 
-        btnFarmCalculate = findViewById(R.id.btnFarmCalculate)
+        btnCalFarmer = findViewById(R.id.btnCalFarmer)
 
-        btnFarmCalculate.setOnClickListener {
-            val intent = Intent(this, FamCalInsert::class.java)
+
+        btnCalFarmer.setOnClickListener {
+            val intent = Intent(this, FarmerCalGetValues::class.java)
             startActivity(intent)
         }
+
 
         // val firebase: DatabaseReference = FirebaseDatabase.getInstance().getReference()
     }
