@@ -62,7 +62,7 @@
         android:fontFamily="@font/poppins"
         android:text="@string/Farmer_history"
         android:textAllCaps="false"
-        android:textSize="24sp"
+        android:textSize="22sp"
         android:textStyle="bold"
         app:icon="@drawable/ic_baseline_keyboard_double_arrow_right_24"
         app:iconGravity="textEnd"

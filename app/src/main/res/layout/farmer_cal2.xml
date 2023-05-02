@@ -45,11 +45,11 @@
 
         <EditText
             android:id="@+id/itermNameFarmer"
-            android:layout_width="178dp"
+            android:layout_width="154dp"
             android:layout_height="54dp"
 
+            android:hint="Enter Item Name"
             android:inputType="text"
-            android:text="Enter Item Name"
             android:textColor="@color/para_text"
             android:textColorHint="@color/headingOpt1"
             android:textSize="16sp" />

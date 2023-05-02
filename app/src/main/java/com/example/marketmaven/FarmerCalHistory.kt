@@ -6,5 +6,6 @@ import android.os.Bundle
 class FarmerCalHistory : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        setContentView(R.layout.farmer_sell_history)
     }
 }
