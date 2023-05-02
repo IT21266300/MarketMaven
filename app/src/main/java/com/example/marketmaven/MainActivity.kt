@@ -20,8 +20,8 @@ class MainActivity : AppCompatActivity() {
 
 
         btnCalFarmer.setOnClickListener {
-            val intent = Intent(this, FarmerCalGetValues::class.java)
-            startActivity(intent)
+            val intent1 = Intent(this, FarmerCalGetValues::class.java)
+            startActivity(intent1)
         }
 
 

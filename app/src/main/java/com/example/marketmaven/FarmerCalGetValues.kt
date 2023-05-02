@@ -37,8 +37,8 @@ class FarmerCalGetValues : AppCompatActivity() {
 
         btnFarmCalculate.setOnClickListener {
             saveFarmerCalculationData()
-            val intent = Intent(this, FamCalInsert::class.java)
-            startActivity(intent)
+            val intent1 = Intent(this, FamCalInsert::class.java)
+            startActivity(intent1)
         }
     }
 
