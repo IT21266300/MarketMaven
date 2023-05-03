@@ -36,6 +36,7 @@
     <string name="pickup_location">Pick-Up Location: </string>
     <string name="delivery_location">Delivery Location: </string>
     <string name="distance">Distance(km): </string>
+    <string name="fuelEfficient">Fuel Efficient: </string>
 
     <!--    placeholders-->
     <string name="hint_delivery_location">Enter Delivery Location</string>
@@ -43,6 +44,7 @@
     <string name="hint_item_name">Enter Item Name</string>
     <string name="hint_item_weight">Enter Item Weight</string>
     <string name="hint_distance">Enter Distance: </string>
+    <string name="hint_fuelEfficient">Fuel Efficient(per liter): </string>
 
     <!--    buttons-->
     <string name="btn_calculate">Calculate</string>
@@ -50,15 +52,17 @@
 
     <!--    display_costs-->
     <string name="trans_date">Date: </string>
-    <string name="trans_fuel_efficiency">Fuel Efficient</string>
-    <string name="trans_driver_wage">Driver Wage</string>
-    <string name="trans_fuel_price">Fuel Price</string>
-    <string name="trans_distance">Distance</string>
-    <string name="trans_total_cost">Total Cost</string>
-    <string name="trans_delivery_location">Delivery Location</string>
-    <string name="trans_pickup_location">Pick-Up Location</string>
-    <string name="trans_item_name">Item Name</string>
-    <string name="trans_item_weight">Item Weight(Kg)</string>
+    <string name="trans_fuel_efficiency">Fuel Efficient: </string>
+    <string name="trans_driver_wage">Driver Wage: </string>
+    <string name="trans_fuel_price">Fuel Price: </string>
+    <string name="trans_distance">Distance: </string>
+    <string name="trans_total_cost">Total Cost: </string>
+    <string name="trans_delivery_location">Delivery Location: </string>
+    <string name="trans_pickup_location">Pick-Up Location: </string>
+    <string name="trans_item_name">Item Name: </string>
+    <string name="trans_item_weight">Item Weight(Kg): </string>
+    <string name="trans_transTotalFuelEfficient">Total Fuel Efficient: </string>
+    <string name="trans_transTotalFuelCost">Total Fuel Cost: </string>
 
     <!--    edit prices-->
     <string name="edit_fuel_price">Fuel Price</string>

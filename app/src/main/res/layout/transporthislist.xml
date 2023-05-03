@@ -1,0 +1,337 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_rowWeight="1"
+    android:layout_columnWeight="1"
+    android:layout_row="0"
+    android:layout_column="0"
+    app:cardCornerRadius="10dp"
+    app:cardElevation="15dp"
+    android:layout_margin="12dp"
+    android:backgroundTint="@color/white">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="12dp">
+
+        <LinearLayout
+            android:id="@+id/card_his_date"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="end"
+            android:paddingVertical="10dp">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_baseline_calendar_month_24"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="12/03/2023"
+                android:textSize="20sp"
+                android:fontFamily="@font/poppins"
+                android:textColor="@color/headingMain"
+                android:layout_marginStart="8dp"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="start"
+            android:layout_marginBottom="15dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins"
+                android:text="@string/trans_total_cost"
+                android:textColor="@color/headingOpt2"
+                android:textSize="20sp"
+                android:layout_marginEnd="5dp"/>
+            <TextView
+                android:id="@+id/transTotalCost"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=": 4000.00LKR"
+                android:textSize="26sp"
+                android:fontFamily="@font/poppins"
+                android:textColor="@color/headingMain"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins"
+                android:text="@string/trans_item_name"
+                android:textColor="@color/headingOpt2"
+                android:textSize="16sp"
+                android:layout_marginEnd="5dp"/>
+            <TextView
+                android:id="@+id/transItemName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=": Tomato"
+                android:textSize="20sp"
+                android:fontFamily="@font/poppins"
+                android:textColor="@color/headingMain"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins"
+                android:text="@string/trans_item_weight"
+                android:textColor="@color/headingOpt2"
+                android:textSize="16sp"
+                android:layout_marginEnd="5dp"/>
+            <TextView
+                android:id="@+id/transItemWeight"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=": 50Kg"
+                android:textSize="20sp"
+                android:fontFamily="@font/poppins"
+                android:textColor="@color/headingMain"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins"
+                android:text="@string/trans_pickup_location"
+                android:textColor="@color/headingOpt2"
+                android:textSize="16sp"
+                android:layout_marginEnd="5dp"/>
+            <TextView
+                android:id="@+id/transPickUp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=": Welimada"
+                android:textSize="20sp"
+                android:fontFamily="@font/poppins"
+                android:textColor="@color/headingMain"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins"
+                android:text="@string/trans_delivery_location"
+                android:textColor="@color/headingOpt2"
+                android:textSize="16sp"
+                android:layout_marginEnd="5dp"/>
+            <TextView
+                android:id="@+id/transDelivery"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=": Peliyagoda"
+                android:textSize="20sp"
+                android:fontFamily="@font/poppins"
+                android:textColor="@color/headingMain"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins"
+                android:text="@string/trans_distance"
+                android:textColor="@color/headingOpt2"
+                android:textSize="16sp"
+                android:layout_marginEnd="5dp"/>
+            <TextView
+                android:id="@+id/transDistance"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=": 234.32Km"
+                android:textSize="20sp"
+                android:fontFamily="@font/poppins"
+                android:textColor="@color/headingMain"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins"
+                android:text="@string/trans_fuel_efficiency"
+                android:textColor="@color/headingOpt2"
+                android:textSize="16sp"
+                android:layout_marginEnd="5dp"/>
+            <TextView
+                android:id="@+id/transFuelEfficient"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=": 6 km/liter"
+                android:textSize="20sp"
+                android:fontFamily="@font/poppins"
+                android:textColor="@color/headingMain"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins"
+                android:text="@string/trans_transTotalFuelEfficient"
+                android:textColor="@color/headingOpt2"
+                android:textSize="16sp"
+                android:layout_marginEnd="5dp"/>
+            <TextView
+                android:id="@+id/transTotalFuelEfficient"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=": 1000.00"
+                android:textSize="20sp"
+                android:fontFamily="@font/poppins"
+                android:textColor="@color/headingMain"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins"
+                android:text="@string/trans_fuel_price"
+                android:textColor="@color/headingOpt2"
+                android:textSize="16sp"
+                android:layout_marginEnd="5dp"/>
+            <TextView
+                android:id="@+id/transFuelPrice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=": Rs.320.40/liter"
+                android:textSize="20sp"
+                android:fontFamily="@font/poppins"
+                android:textColor="@color/headingMain"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins"
+                android:text="@string/trans_transTotalFuelCost"
+                android:textColor="@color/headingOpt2"
+                android:textSize="16sp"
+                android:layout_marginEnd="5dp"/>
+            <TextView
+                android:id="@+id/transTotalFuelCost"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=": Rs.320.40/liter"
+                android:textSize="20sp"
+                android:fontFamily="@font/poppins"
+                android:textColor="@color/headingMain"/>
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins"
+                android:text="@string/trans_driver_wage"
+                android:textColor="@color/headingOpt2"
+                android:textSize="16sp"
+                android:layout_marginEnd="5dp"/>
+            <TextView
+                android:id="@+id/transDriverWag"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=": 1000.00"
+                android:textSize="20sp"
+                android:fontFamily="@font/poppins"
+                android:textColor="@color/headingMain"/>
+        </LinearLayout>
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_horizontal"
+            android:paddingVertical="10dp">
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <ImageButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/backgroundOpt2"
+                    android:src="@drawable/ic_baseline_keyboard_arrow_up_24"
+                    tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="150dp">
+
+                <ImageButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/backgroundOpt2"
+                    android:src="@drawable/ic_baseline_update_24"
+                    tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+
+                <ImageButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/backgroundOpt2"
+                    android:src="@drawable/ic_baseline_delete_forever_24"
+                    tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+            </LinearLayout>
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+
+
+
+</androidx.cardview.widget.CardView>
