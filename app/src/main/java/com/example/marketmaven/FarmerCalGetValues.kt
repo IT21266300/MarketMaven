@@ -9,6 +9,7 @@ import android.widget.Toast
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
 
+
 class FarmerCalGetValues : AppCompatActivity() {
     private lateinit var btnFarmCalculate: Button
     private lateinit var resetBtn: Button
@@ -37,8 +38,11 @@ class FarmerCalGetValues : AppCompatActivity() {
 
         btnFarmCalculate.setOnClickListener {
             saveFarmerCalculationData()
-            val intent1 = Intent(this, FamCalInsert::class.java)
-            startActivity(intent1)
+
+        }
+        resetBtn.setOnClickListener{
+            val intentCancel = Intent(this, FarmerDash::class.java)
+            startActivity(intentCancel)
         }
     }
 
@@ -52,10 +56,21 @@ class FarmerCalGetValues : AppCompatActivity() {
             itermNameFarmer.error = "Please Enter Iterm Name"
         }
 
+        val vegiPrice = 150.00
+
+
+
+        val farmerProfit = (vegiPrice * farmerItemWeight.toDouble() )
+        val farmerTotalProfit = farmerProfit - edtTotalExpens.toDouble()
+
+
+
         val farmerId = dbRef.push().key!!
-        val farmer = FarmerCalModel(farmerId, farmerItem, farmerItemWeight, edtTotalExpens)
+        val farmer = FarmerCalModel(farmerId, farmerItem, farmerItemWeight, edtTotalExpens, farmerTotalProfit)
         dbRef.child(farmerId).setValue(farmer).addOnCompleteListener{
             Toast.makeText(this, "New Farmer Calculation Add Successfully", Toast.LENGTH_LONG).show()
+            val intentDone = Intent(this, FarmerCalResult::class.java)
+            startActivity(intentDone)
 
         }.addOnFailureListener{ err ->
             Toast.makeText(this, "Error ${err.message}", Toast.LENGTH_LONG).show()

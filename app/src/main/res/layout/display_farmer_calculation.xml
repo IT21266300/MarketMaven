@@ -36,6 +36,7 @@
             android:layout_marginStart="12dp">
 
             <TextView
+                android:id="@+id/dateCurrent"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
@@ -99,6 +100,7 @@
                 android:textSize="18sp" />
 
             <TextView
+                android:id="@+id/itemName"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="5"
@@ -123,6 +125,7 @@
                 android:textSize="18sp" />
 
             <TextView
+                android:id="@+id/itemWeight"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="5"
@@ -149,6 +152,7 @@
                 android:textSize="18sp" />
 
             <TextView
+                android:id="@+id/farmExpense"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="5"
@@ -162,9 +166,18 @@
         <TableRow/>
         <TableRow>
 
+            <ImageButton
+                android:id="@+id/btnDelete"
+                android:layout_width="58dp"
+                android:layout_height="match_parent"
+                android:backgroundTint="@color/backgroundOpt2"
+                android:src="@drawable/ic_baseline_delete_forever_24"
+                tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
             <Button
                 android:id="@+id/update_btn"
-                android:layout_width="30dp"
+                android:layout_width="232dp"
+                android:layout_height="match_parent"
                 android:layout_marginHorizontal="18dp"
                 android:layout_weight="2"
                 android:backgroundTint="@color/backgroundOpt2"
@@ -203,6 +216,7 @@
             android:textSize="24sp" />
 
         <TextView
+            android:id="@+id/subProfit"
             android:layout_width="176dp"
             android:layout_height="wrap_content"
             android:fontFamily="@font/poppins"
