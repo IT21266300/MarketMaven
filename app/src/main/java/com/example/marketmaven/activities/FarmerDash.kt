@@ -1,8 +1,9 @@
-package com.example.marketmaven
+package com.example.marketmaven.activities
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
+import com.example.marketmaven.R
 
 class FarmerDash : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -11,7 +12,7 @@ class FarmerDash : AppCompatActivity() {
 
         val btnCalFarmer = findViewById<Button>(R.id.btnCalFarmer)
         btnCalFarmer.setOnClickListener{
-            val intent1 = Intent(this, FarmerCalGetValues::class.java)
+            val intent1 = Intent(this, FarmerCalSetValues::class.java)
             startActivity(intent1)
         }
 

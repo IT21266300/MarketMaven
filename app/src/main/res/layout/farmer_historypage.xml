@@ -11,7 +11,7 @@
         layout="@layout/appbar" />
 
     <TextView
-        android:id="@+id/trans_history"
+        android:id="@+id/farmer_history"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/appBar"
@@ -21,17 +21,17 @@
         android:layout_marginTop="10dp"
         android:layout_marginEnd="-20dp"
         android:fontFamily="@font/poppins"
-        android:text="@string/trans_history"
+        android:text="@string/farm_item_history_heading"
         android:textAlignment="center"
         android:textColor="@color/headingMain"
         android:textSize="30sp"
         android:textStyle="bold" />
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/transHisRecycle"
+        android:id="@+id/farmerHisRecycle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/trans_history"
+        android:layout_below="@+id/farmer_history"
         android:layout_marginStart="20dp"
         android:layout_marginTop="20dp"
         android:layout_marginEnd="20dp"

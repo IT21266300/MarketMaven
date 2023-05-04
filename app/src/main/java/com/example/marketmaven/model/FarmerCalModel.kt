@@ -1,4 +1,4 @@
-package com.example.marketmaven
+package com.example.marketmaven.model
 
 data class FarmerCalModel(
     var farmerId: String? = null,

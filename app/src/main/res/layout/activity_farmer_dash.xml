@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".FarmerDash"
+    tools:context=".activities.FarmerDash"
     android:background="@color/backgroundMain">
 
     <include layout="@layout/appbar" android:id="@+id/appBar"/>
