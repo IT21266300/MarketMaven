@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="preloaded_allfonts" translatable="false">
+        <item>@font/lato</item>
+        <item>@font/roboto</item>
+        <item>@font/monterrat</item>
+        <item>@font/monterrat_semibold</item>
+    </array>
+</resources>
