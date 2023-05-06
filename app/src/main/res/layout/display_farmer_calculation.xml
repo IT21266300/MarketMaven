@@ -6,17 +6,19 @@
     android:layout_height="match_parent"
     android:background="@color/backgroundMain">
 
-    <include layout="@layout/appbar" android:id="@+id/appBar"/>
+    <include
+        android:id="@+id/appBar"
+        layout="@layout/appbar" />
 
     <LinearLayout
         android:id="@+id/display_trans_header"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/appBar"
-        android:orientation="horizontal"
-        android:gravity="center_vertical"
         android:layout_marginHorizontal="20dp"
-        android:layout_marginVertical="12dp">
+        android:layout_marginVertical="12dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
 
         <TextView
             android:id="@+id/display_trans_cost"
@@ -32,8 +34,8 @@
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_marginStart="12dp">
+            android:layout_marginStart="12dp"
+            android:orientation="horizontal">
 
             <TextView
                 android:id="@+id/dateCurrent"
@@ -44,7 +46,7 @@
                 android:fontFamily="@font/poppins"
                 android:paddingHorizontal="5dp"
                 android:paddingVertical="2dp"
-                android:text="17/01/2023"
+                android:text=""
                 android:textColor="@color/headingMain"
                 android:textSize="20sp"
                 android:textStyle="bold" />
@@ -56,33 +58,34 @@
         android:id="@+id/dis_trans_cost_table"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginHorizontal="20dp"
         android:layout_below="@id/display_trans_header"
+        android:layout_marginHorizontal="20dp"
         android:background="@drawable/rounded_corners">
 
         <!--table headers-->
-        <TableRow
-            android:background="@drawable/row_corners">
+        <TableRow android:background="@drawable/row_corners">
+
             <TextView
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:text="Description"
-                android:padding="10dp"
                 android:layout_weight="7"
-                android:gravity="center_horizontal"
-                android:textColor="@color/white"
                 android:fontFamily="@font/poppins"
-                android:textSize="20sp"/>
+                android:gravity="center_horizontal"
+                android:padding="10dp"
+                android:text="Description"
+                android:textColor="@color/white"
+                android:textSize="20sp" />
+
             <TextView
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:text="Summery"
-                android:padding="10dp"
                 android:layout_weight="5"
-                android:gravity="center_horizontal"
-                android:textColor="@color/white"
                 android:fontFamily="@font/poppins"
-                android:textSize="20sp"/>
+                android:gravity="center_horizontal"
+                android:padding="10dp"
+                android:text="Summery"
+                android:textColor="@color/white"
+                android:textSize="20sp" />
         </TableRow>
 
         <!--table data-->
@@ -107,10 +110,11 @@
                 android:fontFamily="@font/poppins"
                 android:gravity="center_horizontal"
                 android:padding="10dp"
-                android:text="Tomato"
+                android:text="Potato"
                 android:textColor="@color/para_text"
                 android:textSize="20sp" />
         </TableRow>
+
         <TableRow>
 
             <TextView
@@ -132,12 +136,15 @@
                 android:fontFamily="@font/poppins"
                 android:gravity="center_horizontal"
                 android:padding="10dp"
-                android:text="500Kg"
+                android:text="5000"
                 android:textColor="@color/para_text"
                 android:textSize="20sp" />
         </TableRow>
-        <TableRow/>
-        <TableRow/>
+
+        <TableRow />
+
+        <TableRow />
+
         <TableRow>
 
             <TextView
@@ -159,11 +166,13 @@
                 android:fontFamily="@font/poppins"
                 android:gravity="center_horizontal"
                 android:padding="10dp"
-                android:text="Rs20000.00"
+                android:text="20000.00"
                 android:textColor="@color/para_text"
                 android:textSize="20sp" />
         </TableRow>
-        <TableRow/>
+
+        <TableRow />
+
         <TableRow>
 
             <ImageButton
@@ -175,7 +184,7 @@
                 tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
 
             <Button
-                android:id="@+id/update_btn"
+                android:id="@+id/btnUpdate"
                 android:layout_width="232dp"
                 android:layout_height="match_parent"
                 android:layout_marginHorizontal="18dp"
@@ -201,6 +210,7 @@
         android:layout_below="@id/dis_trans_cost_table"
         android:layout_marginHorizontal="20dp"
         android:layout_marginVertical="16dp"
+        android:layout_marginTop="88dp"
         android:background="@drawable/rounded_corners"
         android:gravity="center_vertical"
         android:orientation="horizontal"
@@ -208,7 +218,7 @@
         android:paddingVertical="6dp">
 
         <TextView
-            android:layout_width="183dp"
+            android:layout_width="163dp"
             android:layout_height="wrap_content"
             android:fontFamily="@font/poppins"
             android:text="@string/farmer_cal_fun_text3"
@@ -217,18 +227,20 @@
 
         <TextView
             android:id="@+id/subProfit"
-            android:layout_width="176dp"
+            android:layout_width="189dp"
             android:layout_height="wrap_content"
             android:fontFamily="@font/poppins"
-            android:text="Rs. 40000.00"
+            android:text="730000.00"
             android:textColor="@color/headingMain"
             android:textSize="24sp" />
     </LinearLayout>
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/cost_summery"
         android:layout_marginHorizontal="20dp"
-        android:gravity="end"/>
+        android:layout_marginTop="155dp"
+        android:gravity="end" />
 
 </RelativeLayout>

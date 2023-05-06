@@ -49,8 +49,8 @@ class FarmerCalHistory : AppCompatActivity() {
                 farmerHisList.clear()
                 if(snapshot.exists()){
                     for (transSnap in snapshot.children){
-                        val transData =  transSnap.getValue(FarmerCalModel::class.java)
-                        farmerHisList.add(transData!!)
+                        val farmerData =  transSnap.getValue(FarmerCalModel::class.java)
+                        farmerHisList.add(farmerData!!)
                     }
                     val farmerHisAdapter = farmerAdapter(farmerHisList)
                     farmerHisRecycle.adapter = farmerHisAdapter

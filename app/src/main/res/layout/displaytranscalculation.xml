@@ -229,7 +229,7 @@
                android:textSize="14sp"
                android:textStyle="bold" />
             <Button
-                android:id="@+id/update_btn"
+                android:id="@+id/btnUpdate"
                 android:layout_width="30dp"
                 android:text="Update Data"
                 android:layout_weight="2"

@@ -19,14 +19,14 @@ class FarmerDash : AppCompatActivity() {
 
         val farmerHisBtn = findViewById<Button>(R.id.farmer_his_btn)
         farmerHisBtn.setOnClickListener{
-            val intent2 = Intent(this, FarmerCalHistory::class.java)
-            startActivity(intent2)
+            val intent1 = Intent(this, FarmerCalHistory::class.java)
+            startActivity(intent1)
         }
 
         val farmerPriceBtn = findViewById<Button>(R.id.farmer_price)
         farmerPriceBtn.setOnClickListener{
-            val intent3 = Intent(this, ItermPriceEdit::class.java)
-            startActivity(intent3)
+            val intent1 = Intent(this, ItermPriceEdit::class.java)
+            startActivity(intent1)
         }
     }
 }

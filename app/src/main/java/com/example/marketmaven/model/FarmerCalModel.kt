@@ -5,6 +5,6 @@ data class FarmerCalModel(
     var farmerItem: String? = null,
     var farmerItemWeight: String? = null,
     var edtTotalExpens: String? = null,
-var farmerTotalProfit: Double? = null
+    var farmerTotalProfit: Double? = null
 
 )

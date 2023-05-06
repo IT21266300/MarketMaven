@@ -27,16 +27,16 @@ class FarmerCalSetValues : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.farmer_cal2)
 
-        itermNameFarmer = findViewById(R.id.itermNameFarmer)
+        itermNameFarmer = findViewById(R.id.itermNameFarmerEdit)
         itemWeight = findViewById(R.id.edt_weight)
         edtTotalExpens = findViewById(R.id.edt_total_expens)
 
         resetBtn = findViewById(R.id.resetBtn)
-        btnFarmCalculate = findViewById(R.id.btnFarmCalculate)
+        btnFarmCalculate = findViewById(R.id.btnFarmUpdate)
 
         dbRef = FirebaseDatabase.getInstance().getReference("Farmer")
 
-        btnFarmCalculate = findViewById(R.id.btnFarmCalculate)
+        btnFarmCalculate = findViewById(R.id.btnFarmUpdate)
 
         btnFarmCalculate.setOnClickListener {
             saveFarmerCalculationData()
@@ -52,7 +52,7 @@ class FarmerCalSetValues : AppCompatActivity() {
     private fun saveFarmerCalculationData(){
         val farmerItem = itermNameFarmer.text.toString()
         val farmerItemWeight = itemWeight.text.toString()
-        val edtTotalExpens = edtTotalExpens.text.toString()
+        val edtTotalExpenseText = edtTotalExpens.text.toString()
 
 
         //        if(farmerItem.isEmpty()){
@@ -65,17 +65,17 @@ class FarmerCalSetValues : AppCompatActivity() {
 
 
         val farmerProfit = (vegiPrice * farmerItemWeight.toDouble() )
-        val farmerTotalProfit = farmerProfit - edtTotalExpens.toDouble()
+        val farmerTotalProfit = farmerProfit - edtTotalExpenseText.toDouble()
 
 
 
 
         val farmerId = dbRef.push().key!!
-        val farmer = FarmerCalModel(farmerId, farmerItem, farmerItemWeight, edtTotalExpens, farmerTotalProfit)
+        val farmer = FarmerCalModel(farmerId, farmerItem, farmerItemWeight, edtTotalExpenseText, farmerTotalProfit)
         dbRef.child(farmerId).setValue(farmer).addOnCompleteListener{
             Toast.makeText(this, "New Farmer Calculation Add Successfully", Toast.LENGTH_LONG).show()
-//            val intentDone = Intent(this, FarmerCalResult::class.java)
-//            startActivity(intentDone)
+            val intentDone = Intent(this, FarmerCalResult::class.java)
+            startActivity(intentDone)
 
         }.addOnFailureListener{ err ->
             Toast.makeText(this, "Error ${err.message}", Toast.LENGTH_LONG).show()
