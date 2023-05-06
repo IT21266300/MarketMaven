@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:background="@color/backgroundMain">
+    android:background="@drawable/background">
 
     <include
         android:id="@+id/appBar"
@@ -49,8 +49,8 @@
         android:layout_marginTop="378dp"
         android:layout_marginEnd="164dp"
         android:layout_marginBottom="334dp"
-        tools:text="Loading...."
-        android:visibility="gone" />
+        android:visibility="gone"
+        tools:text="Loading...." />
 
 
 </RelativeLayout>

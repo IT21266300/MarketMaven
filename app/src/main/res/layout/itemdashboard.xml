@@ -4,19 +4,23 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity"
+    android:background="@drawable/background"
     android:orientation="vertical"
-    android:background="@color/backgroundMain">
+    tools:context=".activities.MainActivity">
 
-    <include layout="@layout/appbar" android:id="@+id/appBar"/>
+    <include
+        android:id="@+id/appBar"
+        layout="@layout/appbar" />
 
     <TextView
         android:id="@+id/Transport_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_below="@id/appBar"
         android:layout_marginTop="24dp"
+        android:layout_marginLeft="10dp"
         android:fontFamily="@font/poppins"
-        android:text="@string/add_transport"
+        android:text="Calculate Farmer Profit"
         android:textAlignment="center"
         android:textColor="@color/headingMain"
         android:textSize="34sp"
@@ -24,15 +28,16 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:layout_below="@id/appBar"/>
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/sub_pick"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="5dp"
+        android:layout_below="@id/Transport_title"
+        android:layout_marginVertical="15dp"
         android:layout_marginStart="24dp"
+        android:layout_marginTop="5dp"
         android:fontFamily="@font/lato"
         android:text="Pick Your Item"
         android:textAlignment="center"
@@ -42,8 +47,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:layout_below="@id/Transport_title"/>
+        app:layout_constraintTop_toTopOf="parent" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/itemRecycle"

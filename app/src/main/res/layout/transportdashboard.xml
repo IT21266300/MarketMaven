@@ -4,9 +4,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/backgroundMain">
+    android:background="@drawable/background">
 
-    <include layout="@layout/appbar" android:id="@+id/appBar"/>
+    <include
+        android:id="@+id/appBar"
+        layout="@layout/appbar" />
 
     <TextView
         android:id="@+id/trans_dash"

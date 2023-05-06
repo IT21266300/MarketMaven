@@ -1,10 +1,11 @@
-package com.example.marketmaven
+package com.example.marketmaven.activities
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.LinearLayout
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.example.marketmaven.R
 import com.example.marketmaven.adapters.ItemAdapter
 import com.example.marketmaven.models.ItemData
 
@@ -47,6 +48,17 @@ class ItemList : AppCompatActivity() {
             newArrayList.add(item)
         }
 
-        newRecyclerView.adapter = ItemAdapter(newArrayList)
+        var adapter = ItemAdapter(newArrayList)
+        newRecyclerView.adapter = adapter
+        adapter.setOnItemClickListener(object : ItemAdapter.onItemClickListener{
+            override fun onItemClick(position: Int) {
+//                Toast.makeText(this@ItemList, "Clicked on item no: $position", Toast.LENGTH_LONG).show()
+                val intent = Intent(this@ItemList, CalculateTransport::class.java)
+                intent.putExtra("iname", itemName[position])
+                startActivity(intent)
+            }
+
+
+        })
     }
 }

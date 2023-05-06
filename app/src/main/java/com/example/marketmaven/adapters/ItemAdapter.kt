@@ -12,11 +12,23 @@ import com.example.marketmaven.models.ItemData
 class ItemAdapter(private val itemList: ArrayList<ItemData>) :
     RecyclerView.Adapter<ItemAdapter.ItemHolder>() {
 
+    private lateinit var mListener: onItemClickListener
+
+    interface onItemClickListener{
+        fun onItemClick(position: Int)
+    }
+
+    fun setOnItemClickListener(listener: onItemClickListener){
+        mListener = listener
+    }
+
+
+
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ItemHolder {
         val itemView = LayoutInflater.from(parent.context).inflate(R.layout.listitem,
         parent, false)
-        return  ItemHolder(itemView)
+        return  ItemHolder(itemView, mListener)
     }
 
     override fun getItemCount(): Int {
@@ -29,10 +41,15 @@ class ItemAdapter(private val itemList: ArrayList<ItemData>) :
         holder.itemName.text = currentItem.itemName
     }
 
-    class ItemHolder(itemView: View): RecyclerView.ViewHolder(itemView){
+    class ItemHolder(itemView: View, listener: onItemClickListener): RecyclerView.ViewHolder(itemView){
 
         val titleImage : ImageView = itemView.findViewById(R.id.title_image)
         val itemName : TextView = itemView.findViewById(R.id.item_name)
 
+        init {
+            itemView.setOnClickListener{
+                listener.onItemClick(adapterPosition)
+            }
+        }
     }
 }

@@ -7,6 +7,7 @@
     <string name="add_transport">Calculate Transport Cost</string>
     <string name="transport_list">Transport List</string>
     <string name="calculate_header">Calculate Transport Cost</string>
+    <string name="update_calculate_header">Update Transport Cost</string>
     <string name="display_trans_calculation">Transport Cost</string>
     <string name="trans_history">Transport History</string>
     <string name="trans_prices">Transport Prices</string>
@@ -33,18 +34,25 @@
     <!--    transport calculation form-->
     <string name="item_name">Item Name: </string>
     <string name="item_weight">Item Weight(Kg) : </string>
+    <string name="item_weight_factor">Weight Factor(per Kg) : </string>
     <string name="pickup_location">Pick-Up Location: </string>
     <string name="delivery_location">Delivery Location: </string>
     <string name="distance">Distance(km): </string>
     <string name="fuelEfficient">Fuel Efficient: </string>
+    <string name="fuelPrice">Fuel Price(Rs): </string>
+    <string name="driverWage">Driver Wage(Rs): </string>
+
 
     <!--    placeholders-->
     <string name="hint_delivery_location">Enter Delivery Location</string>
     <string name="hint_pickup_location">Enter Pick-Up Location</string>
     <string name="hint_item_name">Enter Item Name</string>
     <string name="hint_item_weight">Enter Item Weight</string>
+    <string name="hint_item_weight_factor">Enter Weight Factor: </string>
     <string name="hint_distance">Enter Distance: </string>
     <string name="hint_fuelEfficient">Fuel Efficient(per liter): </string>
+    <string name="hint_price">Enter Fuel Price: </string>
+    <string name="hint_wage">Enter Driver Wage: </string>
 
     <!--    buttons-->
     <string name="btn_calculate">Calculate</string>
@@ -56,11 +64,13 @@
     <string name="trans_driver_wage">Driver Wage: </string>
     <string name="trans_fuel_price">Fuel Price: </string>
     <string name="trans_distance">Distance: </string>
-    <string name="trans_total_cost">Total Cost: </string>
+    <string name="trans_total_cost">Total Cost(RS.): </string>
     <string name="trans_delivery_location">Delivery Location: </string>
     <string name="trans_pickup_location">Pick-Up Location: </string>
     <string name="trans_item_name">Item Name: </string>
-    <string name="trans_item_weight">Item Weight(Kg): </string>
+    <string name="trans_item_weight">Item Weight: </string>
+    <string name="trans_item_weight_factor">Weight Factor(per Kg): </string>
+    <string name="trans_item_total_weight_factor">Total Weight Factor: </string>
     <string name="trans_transTotalFuelEfficient">Total Fuel Efficient: </string>
     <string name="trans_transTotalFuelCost">Total Fuel Cost: </string>
 

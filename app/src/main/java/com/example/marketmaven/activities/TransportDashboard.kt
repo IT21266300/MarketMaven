@@ -1,9 +1,10 @@
-package com.example.marketmaven
+package com.example.marketmaven.activities
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
+import com.example.marketmaven.R
 
 class TransportDashboard : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -13,7 +14,7 @@ class TransportDashboard : AppCompatActivity() {
 
         val calTransport = findViewById<Button>(R.id.cal_trans_btn)
         calTransport.setOnClickListener{
-            val intent1 = Intent(this, CalculateTransport::class.java)
+            val intent1 = Intent(this, ItemList::class.java)
             startActivity(intent1)
         }
 

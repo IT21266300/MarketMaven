@@ -1,4 +1,4 @@
-package com.example.marketmaven
+package com.example.marketmaven.activities
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity

@@ -2,16 +2,13 @@
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/background">
+    android:background="@drawable/background"
+    android:padding="10dp">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical">
-
-        <include
-            android:id="@+id/appBar"
-            layout="@layout/appbar" />
 
         <TextView
             android:id="@+id/trans_cal_header"
@@ -21,23 +18,22 @@
             android:layout_marginHorizontal="34dp"
             android:layout_marginVertical="10dp"
             android:fontFamily="@font/poppins"
-            android:text="@string/calculate_header"
+            android:text="@string/update_calculate_header"
             android:textAlignment="center"
             android:textColor="@color/headingMain"
             android:textSize="26sp"
             android:textStyle="bold" />
-
 
         <LinearLayout
             android:id="@+id/item_abt"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@+id/trans_cal_header"
-            android:layout_marginHorizontal="34dp"
+            android:layout_marginHorizontal="10dp"
             android:background="@drawable/rounded_corners"
             android:elevation="8dp"
             android:gravity="center"
-            android:paddingHorizontal="12sp"
+            android:paddingHorizontal="12dp"
             android:paddingVertical="10dp">
 
             <TextView
@@ -50,11 +46,10 @@
                 android:textStyle="bold" />
 
             <EditText
-                android:id="@+id/itemName"
+                android:id="@+id/edtname"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:allowClickWhenDisabled="false"
                 android:ems="10"
                 android:inputType="textPersonName"
                 android:text="Tomato"
@@ -67,7 +62,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@+id/item_abt"
-            android:layout_marginHorizontal="34dp"
+            android:layout_marginHorizontal="10dp"
             android:layout_marginVertical="16dp"
             android:background="@drawable/rounded_corners"
             android:elevation="8dp"
@@ -94,7 +89,7 @@
                     android:textStyle="bold" />
 
                 <EditText
-                    android:id="@+id/edt_weight"
+                    android:id="@+id/edtweight"
                     android:layout_width="match_parent"
                     android:layout_height="48dp"
                     android:ems="10"
@@ -124,7 +119,7 @@
                     android:textStyle="bold" />
 
                 <EditText
-                    android:id="@+id/edt_weight_factor"
+                    android:id="@+id/edtweightfactor"
                     android:layout_width="match_parent"
                     android:layout_height="48dp"
                     android:ems="10"
@@ -154,7 +149,7 @@
                     android:textStyle="bold" />
 
                 <EditText
-                    android:id="@+id/edt_pickup"
+                    android:id="@+id/edtpickup"
                     android:layout_width="match_parent"
                     android:layout_height="48dp"
                     android:hint="@string/hint_pickup_location"
@@ -181,7 +176,7 @@
                     android:textStyle="bold" />
 
                 <EditText
-                    android:id="@+id/edt_delivery"
+                    android:id="@+id/edtdelivery"
                     android:layout_width="match_parent"
                     android:layout_height="48dp"
                     android:hint="@string/hint_delivery_location"
@@ -208,7 +203,7 @@
                     android:textStyle="bold" />
 
                 <EditText
-                    android:id="@+id/edt_distance"
+                    android:id="@+id/edtdistance"
                     android:layout_width="match_parent"
                     android:layout_height="48dp"
                     android:ems="10"
@@ -237,7 +232,7 @@
                     android:textStyle="bold" />
 
                 <EditText
-                    android:id="@+id/edt_fuelEfficient"
+                    android:id="@+id/edtfuelEfficient"
                     android:layout_width="match_parent"
                     android:layout_height="48dp"
                     android:ems="10"
@@ -259,14 +254,14 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/poppins"
-                    android:labelFor="@id/edt_fuelPrice"
+                    android:labelFor="@id/edtfuelprice"
                     android:text="@string/fuelPrice"
                     android:textColor="@color/headingMain"
                     android:textSize="20sp"
                     android:textStyle="bold" />
 
                 <EditText
-                    android:id="@+id/edt_fuelPrice"
+                    android:id="@+id/edtfuelprice"
                     android:layout_width="match_parent"
                     android:layout_height="48dp"
                     android:ems="10"
@@ -284,18 +279,18 @@
                 android:orientation="vertical">
 
                 <TextView
-                    android:id="@+id/driverWage"
+                    android:id="@+id/driverwage"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/poppins"
-                    android:labelFor="@id/edt_fuelEfficient"
+                    android:labelFor="@id/edtdriverwage"
                     android:text="@string/driverWage"
                     android:textColor="@color/headingMain"
                     android:textSize="20sp"
                     android:textStyle="bold" />
 
                 <EditText
-                    android:id="@+id/edt_driverWage"
+                    android:id="@+id/edtdriverwage"
                     android:layout_width="match_parent"
                     android:layout_height="48dp"
                     android:ems="10"
@@ -314,23 +309,12 @@
                 android:orientation="horizontal">
 
                 <Button
-                    android:id="@+id/cancelBtn"
-                    android:layout_width="125dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginEnd="15dp"
-                    android:backgroundTint="@color/para_text"
-                    android:fontFamily="@font/poppins"
-                    android:text="@string/btn_rest_calculate"
-                    android:textAllCaps="false"
-                    android:textSize="16sp" />
-
-                <Button
-                    android:id="@+id/submitBtn"
+                    android:id="@+id/transUpdateBtn"
                     android:layout_width="125dp"
                     android:layout_height="wrap_content"
                     android:backgroundTint="@color/backgroundOpt2"
                     android:fontFamily="@font/poppins"
-                    android:text="@string/btn_calculate"
+                    android:text="Update"
                     android:textAllCaps="false"
                     android:textSize="16sp" />
             </LinearLayout>
