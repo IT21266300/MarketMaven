@@ -40,7 +40,8 @@ class FarmerCalSetValues : AppCompatActivity() {
 
         btnFarmCalculate.setOnClickListener {
             saveFarmerCalculationData()
-
+            val intent1 = Intent(this, FarmerCalResult::class.java)
+            startActivity(intent1)
         }
         resetBtn.setOnClickListener{
             val intentCancel = Intent(this, FarmerDash::class.java)
@@ -54,9 +55,10 @@ class FarmerCalSetValues : AppCompatActivity() {
         val edtTotalExpens = edtTotalExpens.text.toString()
 
 
-        if(farmerItem.isEmpty()){
-            itermNameFarmer.error = "Please Enter Iterm Name"
-        }
+        //        if(farmerItem.isEmpty()){
+//            itermNameFarmer.error = "Please Enter Iterm Name"
+//        }
+
 
         val vegiPrice = 150.00
 
@@ -67,12 +69,13 @@ class FarmerCalSetValues : AppCompatActivity() {
 
 
 
+
         val farmerId = dbRef.push().key!!
         val farmer = FarmerCalModel(farmerId, farmerItem, farmerItemWeight, edtTotalExpens, farmerTotalProfit)
         dbRef.child(farmerId).setValue(farmer).addOnCompleteListener{
             Toast.makeText(this, "New Farmer Calculation Add Successfully", Toast.LENGTH_LONG).show()
-            val intentDone = Intent(this, FarmerCalResult::class.java)
-            startActivity(intentDone)
+//            val intentDone = Intent(this, FarmerCalResult::class.java)
+//            startActivity(intentDone)
 
         }.addOnFailureListener{ err ->
             Toast.makeText(this, "Error ${err.message}", Toast.LENGTH_LONG).show()
