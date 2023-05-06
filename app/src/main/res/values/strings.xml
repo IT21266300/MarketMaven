@@ -99,27 +99,6 @@
     <string name="farm_item_history_expenses">Farming Expenses</string>
     <string name="farm_item_history_heading">Farmer Profit Calculation History</string>
 
-    //login
-    <string name="login_lable">Welcome</string>
-    <string name="edt_name">Name</string>
-    <string name="edt_pwd">Password</string>
-    <string name="btn_submit">Submit</string>
-    <string name="btn_forget_pwd">Forget Password?</string>
-    <string name="login_signUP">New User? Sign Up</string>
-
-    //profile
-    <string name="profile_update">Update Details</string>
-    <string name="delete_profile">Delete Profile</string>
-    <string name="reset_password">Reset Password</string>
-    <string name="lable_type">User Type</string>
-    <string name="user_type">Farmer</string>
-
-    //reset password
-    <string name="reset_lable">Reset Password</string>
-    <string name="btn_reset">confirm</string>
-    <string name="reset_home">Back to Home</string>
-
-
     <!--    selling price calculation form-->
     <string name="cal_selling_price">Calculate Selling Price </string>
     <string name="transport_distance">Transport Distance: </string>
@@ -169,6 +148,33 @@
     <string name="btn_delete">Delete</string>
     <string name="btn_update">Update</string>
     <string name="sign_up">Sign-Up</string>
+
+    <!--   Janith-->
+
+    <!--login -->
+    <string name="login_lable">Welcome</string>
+    <string name="edt_name">Name</string>
+    <string name="edt_pwd">Password</string>
+    <string name="btn_submit">Submit</string>
+    <string name="btn_forget_pwd">Forget Password?</string>
+    <string name="login_signUP">New User? Sign Up</string>
+
+    <!--profile -->
+    <string name="profile_update">Update Details</string>
+    <string name="delete_profile">Delete Profile</string>
+    <string name="reset_password">Reset Password</string>
+    <string name="change_password">Change Password</string>
+    <string name="lable_type">User Type</string>
+    <string name="user_type">Farmer</string>
+
+    <!--reset password -->
+    <string name="reset_lable">Reset Password</string>
+    <string name="btn_reset">Confirm</string>
+    <string name="reset_home">Back to LogIn</string>
+
+    <!--SignUp -->
+    <string name="sign_in_btn">SignIn</string>
+    <string name="Register">Register</string>
 
 
 </resources>
