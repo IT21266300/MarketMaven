@@ -18,7 +18,7 @@
         android:text="Selling Item"
         android:textAlignment="center"
         android:textColor="#000000"
-        android:textSize="30sp"
+        android:textSize="34sp"
         android:textStyle="bold" />
 
     <LinearLayout

@@ -18,7 +18,7 @@
         android:text="@string/cal_selling_cost"
         android:textAlignment="center"
         android:textColor="@color/headingOpt2"
-        android:textSize="30sp"
+        android:textSize="34sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -27,12 +27,12 @@
 
     <LinearLayout
         android:id="@+id/linearLayout"
-        android:layout_width="326dp"
-        android:layout_height="117dp"
+        android:layout_width="335dp"
+        android:layout_height="94dp"
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="24dp"
         android:background="@drawable/rounded_corners"
         android:orientation="vertical"
         android:padding="16dp"
@@ -77,17 +77,17 @@
 
     <LinearLayout
         android:id="@+id/linearLayout2"
-        android:layout_width="307dp"
-        android:layout_height="374dp"
+        android:layout_width="334dp"
+        android:layout_height="320dp"
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="20dp"
         android:background="@drawable/rounded_corners"
         android:orientation="vertical"
         android:padding="16dp"
         app:layout_constraintEnd_toEndOf="@+id/linearLayout"
-        app:layout_constraintHorizontal_bias="0.473"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/linearLayout"
         app:layout_constraintTop_toBottomOf="@+id/linearLayout">
 
@@ -117,7 +117,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:paddingBottom="8dp"
-            android:text="@string/transport_distance"
+            android:text="@string/buying_price1"
             android:textColor="@color/backgroundOpt2"
             android:textSize="16sp"
             android:textStyle="bold" />
@@ -128,7 +128,7 @@
             android:layout_height="wrap_content"
             android:height="48dp"
             android:backgroundTint="@color/backgroundOpt1"
-            android:hint="@string/hint_transport_distance"
+            android:hint="Enter Buying Price"
             android:textColor="@color/para_text"
             android:textSize="16sp" />
 
@@ -169,8 +169,38 @@
         android:backgroundTint="@color/headingOpt1"
         android:text="Add New Data"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/linearLayout2" />
+
+    <LinearLayout
+        android:layout_width="365dp"
+        android:layout_height="59dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/caution"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnCalInsert">
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="10dp"
+            android:text="Vegetable has 11% of whole profite"
+            android:textSize="20sp"
+            android:textStyle="bold|italic" />
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="10dp"
+            android:text="Fruits has 13% of whole  profite"
+            android:textSize="20sp"
+            android:textStyle="bold|italic" />
+    </LinearLayout>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

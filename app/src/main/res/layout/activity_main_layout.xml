@@ -11,61 +11,67 @@
 
     <Button
         android:id="@+id/buttonMain1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="55dp"
+        android:layout_width="330dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="32dp"
         android:backgroundTint="@color/backgroundOpt2"
-        android:text="Insert Data"
-        app:layout_constraintEnd_toStartOf="@+id/buttonMain2"
-        app:layout_constraintHorizontal_bias="0.5"
+        android:drawableEnd="@drawable/baseline_keyboard_double_arrow_right_24"
+        android:text="Insert Sell Data"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.506"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/gifImageView" />
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
 
     <Button
         android:id="@+id/buttonMain2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="55dp"
-        android:backgroundTint="@color/headingOpt2"
-        android:text="Show Data"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/buttonMain1"
-        app:layout_constraintTop_toBottomOf="@+id/gifImageView" />
-
-
-    <pl.droidsonroids.gif.GifImageView
-        android:id="@+id/gifImageView"
-        android:layout_width="338dp"
-        android:layout_height="187dp"
-        android:layout_marginTop="64dp"
-        android:background="#fff"
-        android:src="@drawable/home"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView4" />
-
-    <Button
-        android:id="@+id/buttonMain3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:text="Calculate Amount"
+        android:layout_width="330dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="24dp"
+        android:backgroundTint="@color/backgroundOpt2"
+        android:drawableEnd="@drawable/baseline_keyboard_double_arrow_right_24"
+        android:text="Sell History"
+        android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/buttonMain1" />
 
+    <Button
+        android:id="@+id/buttonMain3"
+        android:layout_width="330dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="24dp"
+        android:backgroundTint="@color/backgroundOpt2"
+        android:drawableEnd="@drawable/baseline_keyboard_double_arrow_right_24"
+        android:text="Calculate Sell Cost"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonMain2" />
+
     <ImageView
         android:id="@+id/imageView4"
-        android:layout_width="365dp"
-        android:layout_height="181dp"
-        android:layout_marginTop="24dp"
+        android:layout_width="417dp"
+        android:layout_height="150dp"
         android:cropToPadding="true"
         android:duplicateParentState="false"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/logo" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Selling Cost Data"
+        android:textColor="@color/black"
+        android:textSize="34sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView4" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

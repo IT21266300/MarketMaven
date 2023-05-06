@@ -7,6 +7,11 @@
     tools:context=".activities01.DisplayActivity">
 
 
+<!--    *********************search*******************************-->
+
+    <!--    *********************search*******************************-->
+
+
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rvItems"
         android:layout_width="0dp"
