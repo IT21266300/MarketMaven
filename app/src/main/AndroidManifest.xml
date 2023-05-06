@@ -8,12 +8,38 @@
         android:fullBackupContent="@xml/backup_rules"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.MarketMaven"
+        android:theme="@style/Theme.MadProject1"
         tools:targetApi="31">
         <activity
-            android:name=".MainActivity"
+            android:name=".MainInterface"
+            android:exported="false" />
+        <activity
+            android:name=".activities01.ShowItemData"
+            android:exported="false" />
+        <activity
+            android:name=".ItemDetailsShow"
+            android:exported="false" />
+        <activity
+            android:name=".list_item"
+            android:exported="false" />
+        <activity
+            android:name=".activities01.DisplayActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activities01.CalculateCost"
+            android:exported="false" />
+        <activity
+            android:name=".activities01.ItemDataInsert"
+            android:exported="false" />
+        <activity
+            android:name=".ItemcostHistory"
+            android:exported="false" />
+        <activity
+            android:name=".SellingItem"
+            android:exported="false" />
+        <activity
+            android:name=".activities01.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
