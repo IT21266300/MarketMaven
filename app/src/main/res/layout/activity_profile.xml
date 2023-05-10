@@ -90,7 +90,7 @@
                         android:layout_centerInParent="true"
                         android:hint="type"
                         android:textColor="@color/purple_700"
-                        android:textSize="15sp" />
+                        android:textSize="20sp" />
 
                 </RelativeLayout>
 
@@ -168,6 +168,8 @@
                     android:layout_height="wrap_content"
                     android:drawableLeft="@drawable/profile_email"
                     android:drawablePadding="10dp"
+                    android:enabled="false"
+                    android:textColor="@color/black"
                     android:background="@color/Lgreen" />
 
             </com.google.android.material.textfield.TextInputLayout>

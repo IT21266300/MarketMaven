@@ -101,6 +101,7 @@ class Profile : AppCompatActivity() {
         }
     }
 
+    /*Delete profile button*/
     private fun deleteProfile() {
         val delete = dbRef.child(user_userName).removeValue()
 
@@ -115,11 +116,13 @@ class Profile : AppCompatActivity() {
         }
     }
 
-    /*Validate */
+    /*Validate data change or not*/
     private fun isUsernameChange(): Boolean {
         if (!user_userName.equals(userName.editText?.text.toString())){
             dbRef.child(user_userName).child("userName").setValue(userName.editText?.text.toString())
             user_userName = userName.editText?.text.toString()
+
+
             return true
         }else{
             return false
@@ -158,4 +161,22 @@ class Profile : AppCompatActivity() {
         }
     }
 
+    /*Validations*/
+    private fun validatePhone(): Boolean {
+        var value = phone.editText?.text.toString()
+        if(value.isEmpty()){
+            phone.error = "Field cannot be Empty"
+            return false
+        }else if (value.length != 10) {
+            phone.error = "Phone number should be 10 digits"
+            return false
+        } else if (value[0] != '0') {
+            phone.error = "Phone number should start with 0"
+            return false
+        }else{
+            phone.error = null
+            phone.isErrorEnabled = false
+            return true
+        }
+    }
 }

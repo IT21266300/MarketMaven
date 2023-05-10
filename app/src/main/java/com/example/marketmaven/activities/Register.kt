@@ -104,6 +104,9 @@ class Register : AppCompatActivity() {
         if(value.isEmpty()){
             password.error = "Field cannot be Empty"
             return false
+        }else if (!value.matches(Regex("(?=.*[A-Z])(?=.*[a-z])(?=.*\\d).+"))) {
+            password.error = "Password should contain uppercase letters, lowercase letters, and numbers"
+            return false
         }else{
             password.error = null
             password.isErrorEnabled = false
@@ -137,7 +140,13 @@ class Register : AppCompatActivity() {
         if(value.isEmpty()){
             phone.error = "Field cannot be Empty"
             return false
-        }else{
+        }else if (value.length != 10) {
+            phone.error = "Phone number should be 10 digits"
+            return false
+        } else if (value[0] != '0') {
+            phone.error = "Phone number should start with 0"
+            return false
+        } else{
             phone.error = null
             phone.isErrorEnabled = false
             return true

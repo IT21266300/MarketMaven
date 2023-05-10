@@ -13,6 +13,9 @@
         android:theme="@style/Theme.MarketMaven"
         tools:targetApi="31">
         <activity
+            android:name=".activities.VerifyOTP"
+            android:exported="false" />
+        <activity
             android:name=".activities.Startup"
             android:exported="true">
             <intent-filter>
@@ -53,8 +56,7 @@
             android:exported="false" />
         <activity
             android:name=".activities.MainActivity"
-            android:exported="true">
-        </activity>
+            android:exported="true"></activity>
     </application>
 
 </manifest>
