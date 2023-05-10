@@ -23,7 +23,7 @@ class MainActivity : AppCompatActivity() {
 
 
         btnCalFarmer.setOnClickListener {
-            val intent1 = Intent(this, FarmerCalSetValues::class.java)
+            val intent1 = Intent(this, ItemListFarmer::class.java)
             startActivity(intent1)
         }
 

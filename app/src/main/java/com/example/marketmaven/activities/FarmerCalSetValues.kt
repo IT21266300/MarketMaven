@@ -15,12 +15,11 @@ import java.util.Calendar
 
 
 class FarmerCalSetValues : AppCompatActivity() {
-    private lateinit var btnFarmCalculate: Button
-    private lateinit var resetBtn: Button
-    private lateinit var itermNameFarmer: EditText
-    private lateinit var itemWeight: EditText
-    private lateinit var edtTotalExpens: EditText
-
+    lateinit var btnFarmUpdate: Button
+    lateinit var resetBtn: Button
+    lateinit var itermNameFarmer: EditText
+    lateinit var itemWeight: EditText
+    lateinit var edtTotalExpens: EditText
 
     private lateinit var dbRef: DatabaseReference
 
@@ -32,9 +31,9 @@ class FarmerCalSetValues : AppCompatActivity() {
         itermNameFarmer = findViewById(R.id.itermNameFarmerEdit)
         itemWeight = findViewById(R.id.edt_weight)
         edtTotalExpens = findViewById(R.id.edt_total_expens)
-
         resetBtn = findViewById(R.id.resetBtn)
-        btnFarmCalculate = findViewById(R.id.btnFarmUpdate)
+        btnFarmUpdate = findViewById(R.id.btnFarmUpdate)
+
 
         itermNameFarmer.setText(intent.getStringExtra("iname").toString())
 
@@ -42,12 +41,9 @@ class FarmerCalSetValues : AppCompatActivity() {
 
         dbRef = FirebaseDatabase.getInstance().getReference("Farmer")
 
-        btnFarmCalculate = findViewById(R.id.btnFarmUpdate)
 
-        btnFarmCalculate.setOnClickListener {
+        btnFarmUpdate.setOnClickListener {
             saveFarmerCalculationData()
-            val intent1 = Intent(this, FarmerCalResult::class.java)
-            startActivity(intent1)
         }
         resetBtn.setOnClickListener{
             val intentCancel = Intent(this, FarmerDash::class.java)
@@ -56,7 +52,7 @@ class FarmerCalSetValues : AppCompatActivity() {
     }
 
 
-    private fun saveFarmerCalculationData(){
+    fun saveFarmerCalculationData(){
         val itemPrices = mapOf(
             "Avocado" to 30.00,
             "Banana" to 150.00,
@@ -70,34 +66,22 @@ class FarmerCalSetValues : AppCompatActivity() {
         val edtTotalExpenseText = edtTotalExpens.text.toString()
 
 
-//        if(farmerItem.isEmpty()){
-//            itermNameFarmer.error = "Please Enter Iterm Name"
-//            itermNameFarmer.requestFocus()
-//        }
-
         if(farmerItemWeight.isEmpty()){
-            itemWeight.error = "Please Enter Value"
-
+            itemWeight.error = "Please Enter Weight"
             itemWeight.requestFocus()
         }
 
-        if (farmerItemPrice == null) {
+        if(farmerItemPrice == null){
             itermNameFarmer.error = "Please Enter a Valid Item Name"
             itermNameFarmer.requestFocus()
             return
         }
-
-
-        val vegiPrice = 150.00
-
 
         val calender = Calendar.getInstance().time
         val calDate = DateFormat.getDateInstance().format(calender)
 
         val farmerProfit = "%.2f".format(farmerItemPrice * farmerItemWeight.toDouble() )
         val farmerTotalProfit = "%.2f".format(farmerProfit.toDouble() - edtTotalExpenseText.toDouble())
-
-
 
 
         val farmerId = dbRef.push().key!!
