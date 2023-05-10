@@ -12,7 +12,7 @@ class FarmerDash : AppCompatActivity() {
 
         val btnCalFarmer = findViewById<Button>(R.id.btnCalFarmer)
         btnCalFarmer.setOnClickListener{
-            val intent1 = Intent(this, FarmerCalSetValues::class.java)
+            val intent1 = Intent(this, ItemListFarmer::class.java)
             startActivity(intent1)
         }
 
