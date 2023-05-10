@@ -10,6 +10,8 @@ import com.example.marketmaven.R
 import com.example.marketmaven.models.TransportModel
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
+import java.text.DateFormat
+import java.util.Calendar
 
 class CalculateTransport : AppCompatActivity() {
 
@@ -120,13 +122,15 @@ class CalculateTransport : AppCompatActivity() {
         }
 
 
+        val calender = Calendar.getInstance().time
+        val transDate = DateFormat.getDateInstance().format(calender)
         val transTotalFuelEfficient = "%.2f".format(1 / transFuelEfficient.toDouble())
         val transTotalFuelCost = "%.2f".format( (transDistance.toDouble() / transFuelEfficient.toDouble()) * transFuelPrice.toDouble())
         val transTotalWeightFactor = "%.2f".format( transWeightFactor.toDouble() * transItemWeight.toDouble())
         val transTotalCost = "%.2f".format((transTotalFuelCost.toDouble() + transDriverWage.toDouble() + transTotalWeightFactor.toDouble()))
 
         val transId = dbRef.push().key!!
-        val transport = TransportModel(transId, transItem,
+        val transport = TransportModel(transId, transItem, transDate,
             "%.2f".format(transItemWeight.toDouble()),
             "%.2f".format(transWeightFactor.toDouble()),
             "%.2f".format(transTotalWeightFactor.toDouble()),

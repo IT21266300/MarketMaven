@@ -61,6 +61,7 @@ class TransportHistory : AppCompatActivity() {
                             //put extras
                             intent.putExtra("transId", transHisList[position].transId)
                             intent.putExtra("transItem", transHisList[position].transItem)
+                            intent.putExtra("transDate", transHisList[position].transDate)
                             intent.putExtra("transWeight", transHisList[position].transItemWeight)
                             intent.putExtra("transWeightFactor", transHisList[position].transWeightFactor)
                             intent.putExtra("transTotalWeightFactor", transHisList[position].transTotalWeightFactor)

@@ -33,6 +33,7 @@ class TransportAdapter (private val transHisList: ArrayList<TransportModel>) : R
         holder.itemName.text = currentHis.transItem
         holder.itemWeight.text = currentHis.transItemWeight
         holder.itemTotalCost.text = currentHis.transTotalCost
+        holder.itemDate.text = currentHis.transDate
     }
 
 
@@ -42,6 +43,7 @@ class TransportAdapter (private val transHisList: ArrayList<TransportModel>) : R
 
     class ViewHolder(itemView: View, clickListener: onItemClickListener) : RecyclerView.ViewHolder(itemView) {
         val itemName: TextView = itemView.findViewById(R.id.transItemName)
+        val itemDate: TextView = itemView.findViewById(R.id.transDate)
         val itemWeight: TextView = itemView.findViewById(R.id.transItemWeight)
         val itemTotalCost: TextView = itemView.findViewById(R.id.transTotalCost)
 

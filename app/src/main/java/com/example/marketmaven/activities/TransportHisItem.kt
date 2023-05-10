@@ -12,11 +12,14 @@ import androidx.appcompat.app.AlertDialog
 import com.example.marketmaven.R
 import com.example.marketmaven.models.TransportModel
 import com.google.firebase.database.FirebaseDatabase
+import java.text.DateFormat
+import java.util.Calendar
 
 class TransportHisItem : AppCompatActivity() {
 
     private lateinit var  iname: TextView
     private lateinit var  iweight: TextView
+    private lateinit var  idate: TextView
     private lateinit var  iweightfactor: TextView
     private lateinit var  iweighttotalfactor: TextView
     private lateinit var  ipickup: TextView
@@ -73,6 +76,7 @@ class TransportHisItem : AppCompatActivity() {
     private fun initView(){
         iname = findViewById(R.id.iname)
         iweight = findViewById(R.id.iweight)
+        idate = findViewById(R.id.idate)
         iweightfactor = findViewById(R.id.iweightfactor)
         iweighttotalfactor = findViewById(R.id.iweighttotalfactor)
         ipickup = findViewById(R.id.ipickup)
@@ -91,6 +95,7 @@ class TransportHisItem : AppCompatActivity() {
     private fun setValuesToViews(){
         iname.text = intent.getStringExtra("transItem")
         iweight.text = intent.getStringExtra("transWeight")
+        idate.text = intent.getStringExtra("transDate")
         iweightfactor.text = intent.getStringExtra("transWeightFactor")
         iweighttotalfactor.text = intent.getStringExtra("transTotalWeightFactor")
         ipickup.text = intent.getStringExtra("transPickUp")
@@ -188,6 +193,8 @@ class TransportHisItem : AppCompatActivity() {
     ) {
         val dbRef = FirebaseDatabase.getInstance().getReference("Transport").child(transId)
 
+        val calender = Calendar.getInstance().time
+        val transDate = DateFormat.getDateInstance().format(calender)
         val transTotalFuelEfficient = "%.2f".format(1 / transFuelEfficient.toDouble())
         val transTotalFuelCost = "%.2f".format( (transDistance.toDouble() / transFuelEfficient.toDouble()) * transFuelPrice.toDouble())
         val transTotalWeightFactor = "%.2f".format(transItemWeight.toDouble() * transWeightFactor.toDouble())
@@ -198,7 +205,7 @@ class TransportHisItem : AppCompatActivity() {
         itotalfuelcost.text = transTotalFuelCost
         itotalcost.text = transTotalCost
 
-        val transInfo = TransportModel(transId, transItem,
+        val transInfo = TransportModel(transId, transItem, transDate,
             "%.2f".format(transItemWeight.toDouble()),
             "%.2f".format(transWeightFactor.toDouble()),
             "%.2f".format(transTotalWeightFactor.toDouble()),

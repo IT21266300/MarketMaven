@@ -1,8 +1,11 @@
 package com.example.marketmaven.models
 
+import java.time.LocalDate
+
 data class TransportModel(
     var transId: String? = null,
     var transItem: String? = null,
+    var transDate: String? = null,
     var transItemWeight: String? = null,
     var transWeightFactor: String? = null,
     var transTotalWeightFactor: String? = null,
