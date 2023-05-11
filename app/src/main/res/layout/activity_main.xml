@@ -1,72 +1,54 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/background">
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@drawable/background"
+    android:id="@+id/drawer"
+    android:fitsSystemWindows="true"
+    tools:openDrawer="start"
+    tools:context=".activities.MainActivity">
 
-    <include
-        android:id="@+id/appBar"
-        layout="@layout/appbar" />
 
-    <ImageView
-        android:id="@+id/main_logo"
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <include
+            android:id="@+id/mainToolBar"
+            layout="@layout/appbar"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+        <fragment
+            android:id="@+id/fragmentContainerView"
+            android:name="androidx.navigation.fragment.NavHostFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:defaultNavHost="true"
+            app:navGraph="@navigation/navigation"
+            app:layout_constraintTop_toBottomOf="@+id/mainToolBar"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/navView"
         android:layout_width="wrap_content"
-        android:layout_height="100dp"
-        android:layout_below="@id/appBar"
-        android:src="@drawable/logo" />
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        app:headerLayout="@layout/header"
+        android:background="@drawable/background"
+        app:menu="@menu/menu"
+        android:paddingVertical="30dp"
+        android:paddingHorizontal="10dp"/>
 
-    <Button
-        android:id="@+id/trans_price"
-        android:layout_width="match_parent"
-        android:layout_height="100dp"
-        android:layout_below="@+id/main_logo"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="58dp"
-        android:layout_marginEnd="20dp"
-        android:backgroundTint="@color/backgroundOpt2"
-        android:fontFamily="@font/poppins"
-        android:text="Farmer"
-        android:textAllCaps="false"
-        android:textSize="30sp"
-        android:textStyle="bold"
-        app:icon="@drawable/ic_baseline_keyboard_double_arrow_right_24"
-        app:iconGravity="textEnd"
-        app:iconPadding="0dp"
-        app:iconTintMode="src_in" />
-
-    <Button
-        android:id="@+id/transportBtn"
-        android:layout_width="match_parent"
-        android:layout_height="100dp"
-        android:layout_below="@+id/trans_price"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="50dp"
-        android:layout_marginEnd="20dp"
-        android:backgroundTint="@color/backgroundOpt2"
-        android:fontFamily="@font/poppins"
-        android:text="Transport"
-        android:textAllCaps="false"
-        android:textSize="30sp"
-        android:textStyle="bold"
-        app:icon="@drawable/ic_baseline_keyboard_double_arrow_right_24"
-        app:iconGravity="textEnd" />
-
-    <Button
-        android:id="@+id/sellarBtn"
-        android:layout_width="match_parent"
-        android:layout_height="100dp"
-        android:layout_below="@+id/transportBtn"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="50dp"
-        android:layout_marginEnd="20dp"
-        android:backgroundTint="@color/backgroundOpt2"
-        android:fontFamily="@font/poppins"
-        android:text="Seller"
-        android:textAllCaps="false"
-        android:textSize="30sp"
-        android:textStyle="bold"
-        app:icon="@drawable/ic_baseline_keyboard_double_arrow_right_24"
-        app:iconGravity="textEnd" />
-
-</RelativeLayout>
+</androidx.drawerlayout.widget.DrawerLayout>

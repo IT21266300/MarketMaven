@@ -2,7 +2,7 @@
     <!-- Base application theme. -->
     <style name="Theme.MarketMaven" parent="Theme.MaterialComponents.DayNight.NoActionBar">
         <!-- Primary brand color. -->
-        <item name="colorPrimary">@color/purple_500</item>
+        <item name="colorPrimary">@color/backgroundOpt2</item>
         <item name="colorPrimaryVariant">@color/headingMain</item>
         <item name="colorOnPrimary">@color/white</item>
         <!-- Secondary brand color. -->
@@ -14,4 +14,9 @@
         <item name="android:navigationBarColor">@color/backgroundOpt2</item>
         <!-- Customize your theme here. -->
     </style>
+
+    <style name="menu_text_style" parent="@android:style/TextAppearance.DeviceDefault.Widget.ActionBar.Menu">
+        <item name="android:textSize">25sp</item>
+    </style>
+    
 </resources>

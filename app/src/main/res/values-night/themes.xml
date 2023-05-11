@@ -2,16 +2,21 @@
     <!-- Base application theme. -->
     <style name="Theme.MarketMaven" parent="Theme.MaterialComponents.DayNight.NoActionBar">
         <!-- Primary brand color. -->
-        <item name="colorPrimary">@color/purple_200</item>
-        <item name="colorPrimaryVariant">@color/purple_700</item>
+        <item name="colorPrimary">@color/backgroundOpt2</item>
+        <item name="colorPrimaryVariant">@color/headingMain</item>
         <item name="colorOnPrimary">@color/white</item>
         <!-- Secondary brand color. -->
         <item name="colorSecondary">@color/teal_200</item>
-        <item name="colorSecondaryVariant">@color/teal_200</item>
+        <item name="colorSecondaryVariant">@color/teal_700</item>
         <item name="colorOnSecondary">@color/black</item>
         <!-- Status bar color. -->
-        <item name="android:statusBarColor">@color/headingOpt2</item>
-        <item name="android:navigationBarColor">@color/headingOpt2</item>
+        <item name="android:statusBarColor">@color/backgroundOpt2</item>
+        <item name="android:navigationBarColor">@color/backgroundOpt2</item>
         <!-- Customize your theme here. -->
     </style>
+
+    <style name="menu_text_style" parent="@android:style/TextAppearance.DeviceDefault.Widget.ActionBar.Menu">
+        <item name="android:textSize">25sp</item>
+    </style>
+
 </resources>
