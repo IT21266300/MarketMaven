@@ -55,7 +55,34 @@ class FarmerCalHistory : AppCompatActivity() {
                     val farmerHisAdapter = farmerAdapter(farmerHisList)
                     farmerHisRecycle.adapter = farmerHisAdapter
 
-                    farmerHisRecycle.visibility = View.VISIBLE
+                    farmerHisAdapter.setOnItemClickListener(object : farmerHisAdapter.onItemClickListener{
+                        override fun onItemClick(position: Int) {
+
+                            val intent = Intent(this@TransportHistory, TransportHisItem::class.java)
+
+                            //put extras
+                            intent.putExtra("transId", transHisList[position].transId)
+                            intent.putExtra("transItem", transHisList[position].transItem)
+                            intent.putExtra("transDate", transHisList[position].transDate)
+                            intent.putExtra("transWeight", transHisList[position].transItemWeight)
+                            intent.putExtra("transWeightFactor", transHisList[position].transWeightFactor)
+                            intent.putExtra("transTotalWeightFactor", transHisList[position].transTotalWeightFactor)
+                            intent.putExtra("transPickUp", transHisList[position].transPickUp)
+                            intent.putExtra("transDelivery", transHisList[position].transDelivery)
+                            intent.putExtra("transDistance", transHisList[position].transDistance)
+                            intent.putExtra("transFuelEfficient", transHisList[position].transFuelEfficient)
+                            intent.putExtra("transTotalFuelEfficient", transHisList[position].transTotalFuelEfficient)
+                            intent.putExtra("transFuelPrice", transHisList[position].transFuelPrice)
+                            intent.putExtra("transTotalFuelCost", transHisList[position].transTotalFuelCost)
+                            intent.putExtra("transDriverWage", transHisList[position].transDriverWage)
+                            intent.putExtra("transTotalCost", transHisList[position].transTotalCost)
+
+
+                            startActivity(intent)
+                        }
+
+
+                        farmerHisRecycle.visibility = View.VISIBLE
                     txtLoading.visibility = View.GONE
                 }
             }
