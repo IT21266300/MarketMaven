@@ -26,7 +26,7 @@ class farmerAdapter (private val farmerHistory: ArrayList<FarmerCalModel>) : Rec
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val itemView =
             LayoutInflater.from(parent.context).inflate(R.layout.farmer_sell_history, parent, false)
-        return ViewHolder(itemView)
+        return ViewHolder(itemView, mListener)
     }
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val currentHis =    farmerHistory[position]
@@ -41,7 +41,7 @@ class farmerAdapter (private val farmerHistory: ArrayList<FarmerCalModel>) : Rec
         return farmerHistory.size
     }
 
-    class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
+    class ViewHolder(itemView: View, clickListener: onItemClickListener) : RecyclerView.ViewHolder(itemView) {
         val itemName: TextView = itemView.findViewById(R.id.itemName)
         val itemWeight: TextView = itemView.findViewById(R.id.itemWeight)
         val farmExpense: TextView = itemView.findViewById(R.id.farmExpense)
