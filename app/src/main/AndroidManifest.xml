@@ -54,10 +54,29 @@
         <activity
             android:name=".activities.FarmerCalResult"
             android:exported="false" />
-
+        <activity
+            android:name=".activities.TransportHisItem"
+            android:exported="false" />
+        <activity
+            android:name=".activities.CalculateTransport"
+            android:exported="false" />
+        <activity
+            android:name=".activities.TransportData"
+            android:exported="false" />
+        <activity
+            android:name=".activities.TransportHistory"
+            android:exported="false" />
         <activity
             android:name=".activities.ItemList"
             android:exported="false" />
+        <activity
+            android:name=".activities.TransportDashboard"
+            android:exported="false" />
+        <activity
+            android:name=".activities.MainActivity"
+            android:exported="false" />
+
+
         <activity
             android:name=".activities.Startup"
             android:exported="true">
