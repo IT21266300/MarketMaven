@@ -17,14 +17,14 @@ class HomePage : AppCompatActivity() {
 
 
 
-        CalFarmer = findViewById(R.id.btnCalFarmer)
+        CalFarmer = findViewById(R.id.farmerListbtn1)
         transList = findViewById(R.id.transListBtn)
         sellerList = findViewById(R.id.sellerListBtn)
 
 
 
         CalFarmer.setOnClickListener {
-            val intent1 = Intent(this, FarmerCalSetValues::class.java)
+            val intent1 = Intent(this, FarmerDash::class.java)
             startActivity(intent1)
         }
 

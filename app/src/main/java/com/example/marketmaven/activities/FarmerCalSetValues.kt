@@ -69,6 +69,7 @@ class FarmerCalSetValues : AppCompatActivity() {
         if(farmerItemWeight.isEmpty()){
             itemWeight.error = "Please Enter Weight"
             itemWeight.requestFocus()
+            return
         }
 
         if(farmerItemPrice == null){
