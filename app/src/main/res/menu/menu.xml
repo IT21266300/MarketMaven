@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <item
+        android:id="@+id/homeFragment"
+        android:icon="@drawable/ic_baseline_keyboard_double_arrow_right_2_24"
+        android:checked="true"
+        android:checkable="true"
+        android:title="Home"
+        />
+
+    <item
+        android:id="@+id/farmerFragment"
+        android:icon="@drawable/ic_baseline_keyboard_double_arrow_right_2_24"
+        android:checked="true"
+        android:checkable="true"
+        android:title="Farmer"
+        />
+
+    <item
+        android:id="@+id/transportFragment"
+        android:icon="@drawable/ic_baseline_keyboard_double_arrow_right_2_24"
+        android:checked="true"
+        android:checkable="true"
+        android:title="Transport"
+        />
+
+    <item
+        android:id="@+id/sellerFragment"
+        android:icon="@drawable/ic_baseline_keyboard_double_arrow_right_2_24"
+        android:checked="true"
+        android:checkable="true"
+        android:title="Seller"
+        />
+
+</menu>

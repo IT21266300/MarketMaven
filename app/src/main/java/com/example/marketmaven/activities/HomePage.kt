@@ -29,7 +29,7 @@ class HomePage : AppCompatActivity() {
         }
 
         transList.setOnClickListener {
-            val intent2 = Intent(this, FarmerCalSetValues::class.java)
+            val intent2 = Intent(this, TransportDashboard::class.java)
             startActivity(intent2)
         }
         sellerList.setOnClickListener {

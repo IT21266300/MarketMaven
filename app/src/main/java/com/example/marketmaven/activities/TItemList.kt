@@ -9,7 +9,7 @@ import com.example.marketmaven.R
 import com.example.marketmaven.adapters.ItemAdapter
 import com.example.marketmaven.models.ItemData
 
-class ItemList : AppCompatActivity() {
+class TItemList : AppCompatActivity() {
 
     private lateinit var newRecyclerView: RecyclerView
     private lateinit var newArrayList: ArrayList<ItemData>
@@ -18,7 +18,7 @@ class ItemList : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.itemdashboard_farm)
+        setContentView(R.layout.itemdashboard)
 
         imageId = arrayOf(
             R.drawable.a,
@@ -52,8 +52,7 @@ class ItemList : AppCompatActivity() {
         newRecyclerView.adapter = adapter
         adapter.setOnItemClickListener(object : ItemAdapter.onItemClickListener{
             override fun onItemClick(position: Int) {
-//                Toast.makeText(this@ItemList, "Clicked on item no: $position", Toast.LENGTH_LONG).show()
-                val intent = Intent(this@ItemList, CalculateTransport::class.java)
+                val intent = Intent(this@TItemList, CalculateTransport::class.java)
                 intent.putExtra("iname", itemName[position])
                 startActivity(intent)
             }

@@ -185,4 +185,51 @@
     <string name="Register">Register</string>
 
 
+
+    <!--    transport calculation form-->
+
+    <string name="item_weight_factor">Weight Factor(per Kg) : </string>
+    
+    <string name="distance">Distance(km): </string>
+    <string name="fuelEfficient">Fuel Efficient: </string>
+    <string name="fuelPrice">Fuel Price(Rs): </string>
+    <string name="driverWage">Driver Wage(Rs): </string>
+
+
+    <!--    placeholders-->
+
+    <string name="hint_item_weight_factor">Enter Weight Factor: </string>
+    <string name="hint_distance">Enter Distance: </string>
+    <string name="hint_fuelEfficient">Fuel Efficient(per liter): </string>
+    <string name="hint_price">Enter Fuel Price: </string>
+    <string name="hint_wage">Enter Driver Wage: </string>
+
+    <!--    buttons-->
+
+    <string name="trans_item_weight_factor">Weight Factor(per Kg): </string>
+    <string name="trans_item_total_weight_factor">Total Weight Factor: </string>
+    <string name="trans_transTotalFuelEfficient">Total Fuel Efficient: </string>
+    <string name="trans_transTotalFuelCost">Total Fuel Cost: </string>
+
+    <!--    edit prices-->
+    <string name="edit_fuel_price">Fuel Price</string>
+    <string name="new_fuel_price">New Fuel Price</string>
+    <string name="edit_fuel_efficiency">Fuel Efficient</string>
+    <string name="edit_driver_wage">Driver Wage</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+
+    <string name="transport_dash_head">Transport Dashboard</string>
+
+    <string name="update_calculate_header">Update Transport Cost</string>
+
+    <string name="trans_prices">Transport Prices</string>
+
+    <!--    vegetables-->
+
+
+    
+
+
 </resources>
