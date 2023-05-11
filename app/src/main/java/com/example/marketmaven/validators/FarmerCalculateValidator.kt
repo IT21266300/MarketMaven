@@ -9,7 +9,6 @@ object FarmerCalculateValidator {
                        edtTotalExpens: String,
                        farmerTotalProfit: Double
 
-
     ): Boolean {
         return !(
                 farmerItem.isEmpty() ||
