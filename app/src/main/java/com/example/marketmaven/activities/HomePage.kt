@@ -17,23 +17,23 @@ class HomePage : AppCompatActivity() {
 
 
 
-        CalFarmer = findViewById(R.id.btnCalFarmer)
+        CalFarmer = findViewById(R.id.farmerListbtn1)
         transList = findViewById(R.id.transListBtn)
         sellerList = findViewById(R.id.sellerListBtn)
 
 
 
         CalFarmer.setOnClickListener {
-            val intent1 = Intent(this, FarmerCalSetValues::class.java)
+            val intent1 = Intent(this, FarmerDash::class.java)
             startActivity(intent1)
         }
 
         transList.setOnClickListener {
-            val intent2 = Intent(this, FarmerCalHistory::class.java)
+            val intent2 = Intent(this, FarmerCalSetValues::class.java)
             startActivity(intent2)
         }
         sellerList.setOnClickListener {
-            val intent3 = Intent(this, ItermPriceEdit::class.java)
+            val intent3 = Intent(this, FarmerCalSetValues::class.java)
             startActivity(intent3)
         }
 

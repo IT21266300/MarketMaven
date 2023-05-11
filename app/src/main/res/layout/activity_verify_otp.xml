@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/LLLgreen"
+    android:orientation="vertical"
+    tools:context=".activities.VerifyOTP">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="186dp"
+            android:src="@drawable/logo"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="30dp">
+
+        <EditText
+            android:id="@+id/login_otp"
+            android:layout_width="250dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="20dp"
+            android:layout_gravity="center"
+            android:hint="Enter OTP Here"
+            android:textColorHint="@color/black"/>
+
+        <Button
+            android:id="@+id/otp_btn_submit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:backgroundTint="@color/Dgreen"
+            android:text="Submit"/>
+        
+        <ProgressBar
+            android:id="@+id/otp_progressBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"/>
+
+    </LinearLayout>
+
+</LinearLayout>
