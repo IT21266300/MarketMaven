@@ -27,12 +27,6 @@ class FarmerCalResult : AppCompatActivity() {
         initView()
         setValuesToViews()
 
-//        btnUpdate.setOnClickListener {
-//            openUpdateDialog(
-//                intent.getStringExtra("farmerId").toString(),
-//                intent.getStringExtra("farmerItem").toString()
-//            )
-//        }
 
         btnDelete.setOnClickListener {
             deleteRecord(
@@ -54,8 +48,7 @@ class FarmerCalResult : AppCompatActivity() {
     private fun setValuesToViews(){
         itemName.text = intent.getStringExtra("farmerItem")
         itemWeight.text = intent.getStringExtra("farmerItemWeight")
-//        farmExpense.text = intent.getStringExtra("farmerExpense")
-//        subProfit.text = intent.getStringExtra("farmerProfit")
+
 
         val doubleFarmExpense = intent.getStringExtra("farmerExpense")?.toDouble() ?: 0.0
         val doubleSubProfit = intent.getStringExtra("farmerSubProfit")?.toDouble() ?: 0.0
@@ -80,71 +73,5 @@ class FarmerCalResult : AppCompatActivity() {
             Toast.makeText(this, "Deleting has error of ${err.message}",Toast.LENGTH_LONG).show()
         }
     }
-
-//    private fun openUpdateDialog(
-//        farmerId:String,
-//        farmerItem: String
-//    ){
-//        val mDialog = AlertDialog.Builder(this)
-//        val inflater = layoutInflater
-//        val mDialogView = inflater.inflate(R.layout.farmer_caledit,null)
-//
-//        mDialog.setView(mDialogView)
-//
-//        val itermNameFarmerEdit     = mDialogView.findViewById<EditText>(R.id.itermNameFarmerEdit)
-//        val edtWeight   = mDialogView.findViewById<EditText>(R.id.edt_weight)
-//        val edtTotalExpens = mDialogView.findViewById<EditText>(R.id.edt_total_expens)
-//
-//
-//        val btnUpdateData = mDialogView.findViewById<Button>(R.id.btnFarmUpdate)
-//
-//        itermNameFarmerEdit.setText(intent.getStringExtra("farmerItem").toString())
-//        edtWeight.setText(intent.getStringExtra("farmerItemWeight").toString())
-//        edtTotalExpens.setText(intent.getStringExtra("edtTotalExpens").toString())
-//
-//
-//        mDialog.setTitle("Update $farmerItem Data!")
-//
-//        val alertDialog = mDialog.create()
-//        alertDialog.show()
-//
-//        btnUpdateData.setOnClickListener {
-//            updateItemData(
-//                farmerId,
-//                itermNameFarmerEdit.text.toString(),
-//                edtWeight.text.toString(),
-//                edtTotalExpens.text.toString(),
-//
-//            )
-//            Toast.makeText(applicationContext, "Item Data Updated", Toast.LENGTH_LONG).show()
-//
-//            //setting new updated values to text views
-//            tvItemName.text = edtName.text.toString()
-//            tvItemWeight.text = edtWeight.text.toString()
-//            tvItemDistance.text = edtDistance.text.toString()
-//            tvItemBuy.text = edtBuy.text.toString()
-//            tvItemSell.text = edtSell.text.toString()
-//
-//            alertDialog.dismiss()
-//        }
-//
-//    }
-//
-//    private fun updateItemData(id: String, name: String, weight: String, distance: String) {
-//
-//    }
-//
-//    private fun updateItemData(
-//        id:String,
-//        name:String,
-//        weight:String,
-//        distance:String,
-//        buy:String,
-//        sell:String
-//    ){
-//        val dbRef = FirebaseDatabase.getInstance().getReference("Items").child(id)
-//        val itemInfo = ItemModel(id,name,weight,distance,buy,sell)
-//        dbRef.setValue(itemInfo)
-//    }
 
 }
