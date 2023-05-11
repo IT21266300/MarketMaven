@@ -53,7 +53,7 @@ class ItemList : AppCompatActivity() {
         adapter.setOnItemClickListener(object : ItemAdapter.onItemClickListener{
             override fun onItemClick(position: Int) {
 //                Toast.makeText(this@ItemList, "Clicked on item no: $position", Toast.LENGTH_LONG).show()
-                val intent = Intent(this@ItemList, FarmerCalSetValues::class.java)
+                val intent = Intent(this@ItemList, CalculateTransport::class.java)
                 intent.putExtra("iname", itemName[position])
                 startActivity(intent)
             }
