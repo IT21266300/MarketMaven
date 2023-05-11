@@ -62,22 +62,12 @@ class FarmerCalHistory : AppCompatActivity() {
                             val intent = Intent(this@FarmerCalHistory, FarmerDetailHistory::class.java)
 
                             //put extras
-                            intent.putExtra("transId", transHisList[position].transId)
-                            intent.putExtra("transItem", transHisList[position].transItem)
-                            intent.putExtra("transDate", transHisList[position].transDate)
-                            intent.putExtra("transWeight", transHisList[position].transItemWeight)
-                            intent.putExtra("transWeightFactor", transHisList[position].transWeightFactor)
-                            intent.putExtra("transTotalWeightFactor", transHisList[position].transTotalWeightFactor)
-                            intent.putExtra("transPickUp", transHisList[position].transPickUp)
-                            intent.putExtra("transDelivery", transHisList[position].transDelivery)
-                            intent.putExtra("transDistance", transHisList[position].transDistance)
-                            intent.putExtra("transFuelEfficient", transHisList[position].transFuelEfficient)
-                            intent.putExtra("transTotalFuelEfficient", transHisList[position].transTotalFuelEfficient)
-                            intent.putExtra("transFuelPrice", transHisList[position].transFuelPrice)
-                            intent.putExtra("transTotalFuelCost", transHisList[position].transTotalFuelCost)
-                            intent.putExtra("transDriverWage", transHisList[position].transDriverWage)
-                            intent.putExtra("transTotalCost", transHisList[position].transTotalCost)
-
+                            intent.putExtra("farmerId", farmerHisList[position].farmerId)
+                            intent.putExtra("farmerItem", farmerHisList[position].farmerItem)
+                            intent.putExtra("farmerItemWeight", farmerHisList[position].farmerItemWeight)
+                            intent.putExtra("calDate", farmerHisList[position].calDate)
+                            intent.putExtra("edtTotalExpens", farmerHisList[position].edtTotalExpens)
+                            intent.putExtra("farmerTotalProfit", farmerHisList[position].farmerTotalProfit)
 
                             startActivity(intent)
                         }
