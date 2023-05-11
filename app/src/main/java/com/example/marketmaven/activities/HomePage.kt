@@ -29,11 +29,11 @@ class HomePage : AppCompatActivity() {
         }
 
         transList.setOnClickListener {
-            val intent2 = Intent(this, FarmerCalHistory::class.java)
+            val intent2 = Intent(this, FarmerCalSetValues::class.java)
             startActivity(intent2)
         }
         sellerList.setOnClickListener {
-            val intent3 = Intent(this, ItermPriceEdit::class.java)
+            val intent3 = Intent(this, FarmerCalSetValues::class.java)
             startActivity(intent3)
         }
 

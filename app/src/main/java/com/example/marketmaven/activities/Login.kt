@@ -122,7 +122,7 @@ class Login : AppCompatActivity() {
                         var userNameFromDB = snapshot.child(userEnterdUsername).child("userName").getValue().toString()
                         var passwordFromDB = snapshot.child(userEnterdUsername).child("password").getValue().toString()
                         var TypeFromDB = snapshot.child(userEnterdUsername).child("userType").getValue().toString()
-                        var intent = Intent(applicationContext, HomePage::class.java)
+                        var intent = Intent(applicationContext, Profile::class.java)
 
                         intent.putExtra("name",nameFromDB)
                         intent.putExtra("address", addressFromDB)
