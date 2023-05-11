@@ -13,6 +13,24 @@
         android:theme="@style/Theme.MarketMaven"
         tools:targetApi="31">
         <activity
+            android:name=".activities.ChangePassword"
+            android:exported="false" />
+        <activity
+            android:name=".activities.ForgotPassword"
+            android:exported="false" />
+        <activity
+            android:name=".activities.Login"
+            android:exported="false" />
+        <activity
+            android:name=".activities.Profile"
+            android:exported="false" />
+        <activity
+            android:name=".activities.Register"
+            android:exported="false" />
+        <activity
+            android:name=".activities.VerifyOTP"
+            android:exported="false" />
+        <activity
             android:name=".activities.FarmerDetailHistory"
             android:exported="false" />
         <activity
@@ -36,20 +54,12 @@
         <activity
             android:name=".activities.FarmerCalResult"
             android:exported="false" />
-        <activity
-            android:name=".activities.TransportHisItem"
-            android:exported="false" />
-        <activity
-            android:name=".activities.TransportData"
-            android:exported="false" />
-        <activity
-            android:name=".activities.TransportHistory"
-            android:exported="false" />
+
         <activity
             android:name=".activities.ItemList"
             android:exported="false" />
         <activity
-            android:name=".activities.MainActivity"
+            android:name=".activities.Startup"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

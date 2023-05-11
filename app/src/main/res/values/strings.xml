@@ -172,5 +172,17 @@
     <string name="btn_update">Update</string>
     <string name="sign_up">Sign-Up</string>
 
+    <!--login -->
+
+    <!--profile -->
+
+    <string name="change_password">Change Password</string>
+
+
+
+    <!--SignUp -->
+    <string name="sign_in_btn">SignIn</string>
+    <string name="Register">Register</string>
+
 
 </resources>
