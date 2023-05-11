@@ -1,5 +1,6 @@
 package com.example.marketmaven.activities
 
+import android.annotation.SuppressLint
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.example.marketmaven.R
@@ -17,20 +18,12 @@ import java.util.Calendar
 
 class FarmerDetailHistory : AppCompatActivity() {
 
-    private lateinit var  iname: TextView
-    private lateinit var  iweight: TextView
-    private lateinit var  idate: TextView
-    private lateinit var  iweightfactor: TextView
-    private lateinit var  iweighttotalfactor: TextView
-    private lateinit var  ipickup: TextView
-    private lateinit var  idelivery: TextView
-    private lateinit var  idistance: TextView
-    private lateinit var  ifuelefficient: TextView
-    private lateinit var  itotalfuelefficient: TextView
-    private lateinit var  ifuelprice: TextView
-    private lateinit var  itotalfuelcost: TextView
-    private lateinit var  idriverwage: TextView
-    private lateinit var  itotalcost: TextView
+    private lateinit var  finame: TextView
+    private lateinit var  fiweight: TextView
+    private lateinit var  fidate: TextView
+    private lateinit var  fiexpenses: TextView
+
+    private lateinit var  fitotalprofit: TextView
     private lateinit var  btnUpdate: ImageButton
     private lateinit var  btnDelete: ImageButton
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -49,20 +42,20 @@ class FarmerDetailHistory : AppCompatActivity() {
         btnUpdate.setOnClickListener {
             openUpdateDialog(
                 intent.getStringExtra("farmerId").toString(),
-                intent.getStringExtra("transItem").toString()
+                intent.getStringExtra("farmerItem").toString()
             )
         }
 
     }
 
     private fun deleteRecord(
-        transId: String
+        farmerId: String
     ){
         val dbRef = FirebaseDatabase.getInstance().getReference("Farmer").child(farmerId)
         val mTask = dbRef.removeValue()
 
         mTask.addOnSuccessListener {
-            Toast.makeText(this, "Delete Transport Data", Toast.LENGTH_LONG).show()
+            Toast.makeText(this, "Delete Farmer Calculation Data", Toast.LENGTH_LONG).show()
             val intent = Intent(this, FarmerCalHistory::class.java)
             finish()
             startActivity(intent)
@@ -72,72 +65,44 @@ class FarmerDetailHistory : AppCompatActivity() {
     }
 
     private fun initView(){
-        iname = findViewById(R.id.iname)
-        iweight = findViewById(R.id.iweight)
-        idate = findViewById(R.id.idate)
-        iweightfactor = findViewById(R.id.iweightfactor)
-        iweighttotalfactor = findViewById(R.id.iweighttotalfactor)
-        ipickup = findViewById(R.id.ipickup)
-        idelivery = findViewById(R.id.idelivary)
-        idistance = findViewById(R.id.idistance)
-        ifuelefficient = findViewById(R.id.ifuelefficient)
-        itotalfuelefficient = findViewById(R.id.itotalfuelefficient)
-        ifuelprice = findViewById(R.id.ifuelprice)
-        itotalfuelcost = findViewById(R.id.itotalfuelcost)
-        idriverwage = findViewById(R.id.idriverwage)
-        itotalcost = findViewById(R.id.itotalcost)
+        finame = findViewById(R.id.famItemName)
+        fiweight = findViewById(R.id.fweight)
+        fidate = findViewById(R.id.fdate)
+        fiexpenses = findViewById(R.id.fexpenses)
+
+        fitotalprofit = findViewById(R.id.ftotalprofit)
         btnDelete = findViewById(R.id.del_btn)
         btnUpdate= findViewById(R.id.update_btn)
     }
 
     private fun setValuesToViews(){
-        iname.text = intent.getStringExtra("transItem")
-        iweight.text = intent.getStringExtra("transWeight")
-        idate.text = intent.getStringExtra("transDate")
-        iweightfactor.text = intent.getStringExtra("transWeightFactor")
-        iweighttotalfactor.text = intent.getStringExtra("transTotalWeightFactor")
-        ipickup.text = intent.getStringExtra("transPickUp")
-        idelivery.text = intent.getStringExtra("transDelivery")
-        idistance.text = intent.getStringExtra("transDistance")
-        ifuelefficient.text = intent.getStringExtra("transFuelEfficient")
-        itotalfuelefficient.text = intent.getStringExtra("transTotalFuelEfficient")
-        ifuelprice.text = intent.getStringExtra("transFuelPrice")
-        itotalfuelcost.text = intent.getStringExtra("transTotalFuelCost")
-        idriverwage.text = intent.getStringExtra("transDriverWage")
-        itotalcost.text = intent.getStringExtra("transTotalCost")
+        finame.text = intent.getStringExtra("farmerItem")
+        fiweight.text = intent.getStringExtra("farmerItemWeight")
+        fidate.text = intent.getStringExtra("calDate")
+        fiexpenses.text = intent.getStringExtra("edtTotalExpens")
+        fitotalprofit.text = intent.getStringExtra("farmerTotalProfit")
 
     }
 
+    @SuppressLint("MissingInflatedId")
     private fun openUpdateDialog(
-        transId: String,
-        transItem: String
+        farmerId: String,
+        farmerItem: String
     ) {
         val mDialog = AlertDialog.Builder(this)
         val inflater = layoutInflater
-        val mDialogView = inflater.inflate(R.layout.updatetransport, null)
+        val mDialogView = inflater.inflate(R.layout.farmer_update, null)
 
         mDialog.setView(mDialogView)
 
         val edtname = mDialogView.findViewById<EditText>(R.id.edtname)
         val edtweight = mDialogView.findViewById<EditText>(R.id.edtweight)
-        val edtweightfactor = mDialogView.findViewById<EditText>(R.id.edtweightfactor)
-        val edtpickup = mDialogView.findViewById<EditText>(R.id.edtpickup)
-        val edtdelivery = mDialogView.findViewById<EditText>(R.id.edtdelivery)
-        val edtdistance = mDialogView.findViewById<EditText>(R.id.edtdistance)
-        val edtfuelEfficient = mDialogView.findViewById<EditText>(R.id.edtfuelEfficient)
-        val edtfuelPrice = mDialogView.findViewById<EditText>(R.id.edtfuelprice)
-        val edtdriverWage = mDialogView.findViewById<EditText>(R.id.edtdriverwage)
-        val transUpdateBtn = mDialogView.findViewById<Button>(R.id.transUpdateBtn)
+        val edtexpenses = mDialogView.findViewById<EditText>(R.id.edtexpenses)
+        val transUpdateBtn = mDialogView.findViewById<Button>(R.id.farmerUpdateBtn)
 
-        edtname.setText(intent.getStringExtra("transItem").toString())
-        edtweight.setText(intent.getStringExtra("transWeight").toString())
-        edtweightfactor.setText(intent.getStringExtra("transWeightFactor").toString())
-        edtpickup.setText(intent.getStringExtra("transPickUp").toString())
-        edtdelivery.setText(intent.getStringExtra("transDelivery").toString())
-        edtdistance.setText(intent.getStringExtra("transDistance").toString())
-        edtfuelEfficient.setText(intent.getStringExtra("transFuelEfficient").toString())
-        edtfuelPrice.setText(intent.getStringExtra("transFuelPrice").toString())
-        edtdriverWage.setText(intent.getStringExtra("transDriverWage").toString())
+        edtname.setText(intent.getStringExtra("farmerItem").toString())
+        edtweight.setText(intent.getStringExtra("farmerItemWeight").toString())
+        edtexpenses.setText(intent.getStringExtra("edtTotalExpens").toString())
 
 
 
@@ -145,78 +110,67 @@ class FarmerDetailHistory : AppCompatActivity() {
         alertDialog.show()
 
         transUpdateBtn.setOnClickListener {
-            updateTransData(
-                transId,
+            updateFarmerData(
+                farmerId,
                 edtname.text.toString(),
                 edtweight.text.toString(),
-                edtweightfactor.text.toString(),
-                edtpickup.text.toString(),
-                edtdelivery.text.toString(),
-                edtdistance.text.toString(),
-                edtfuelEfficient.text.toString(),
-                edtfuelPrice.text.toString(),
-                edtdriverWage.text.toString(),
+                edtexpenses.text.toString(),
             )
 
-            Toast.makeText(applicationContext, "Employee Data Updated", Toast.LENGTH_LONG).show()
+            Toast.makeText(applicationContext, "Farmer Calculation Data Updated", Toast.LENGTH_LONG).show()
 
 
-
-            iname.text = edtname.text.toString()
-            iweight.text = edtweight.text.toString()
-            iweightfactor.text = edtweightfactor.text.toString()
-            ipickup.text = edtpickup.text.toString()
-            idelivery.text = edtdelivery.text.toString()
-            idistance.text = edtdistance.text.toString()
-            ifuelefficient.text = edtfuelEfficient.text.toString()
-            ifuelprice.text = edtfuelPrice.text.toString()
-            idriverwage.text = edtdriverWage.text.toString()
-
+            finame.text = edtname.text.toString()
+            fiweight.text = edtweight.text.toString()
+            fiexpenses.text = edtexpenses.text.toString()
 
             alertDialog.dismiss()
         }
     }
 
-    private fun updateTransData(
-        transId: String,
-        transItem: String,
-        transItemWeight: String,
-        transWeightFactor: String,
-        transPickUp: String,
-        transDelivery: String,
-        transDistance: String,
-        transFuelEfficient: String,
-        transFuelPrice: String,
-        transDriverWage: String,
+    private fun updateFarmerData(
+        farmerId: String,
+        edtname: String,
+        edtweight: String,
+        edtexpenses: String,
+
     ) {
-        val dbRef = FirebaseDatabase.getInstance().getReference("Transport").child(transId)
+        val dbRef = FirebaseDatabase.getInstance().getReference("Farmer").child(farmerId)
+        val itemPrices = mapOf(
+            "Avocado" to 30.00,
+            "Banana" to 150.00,
+            "Beans" to 250.00,
+            "Cabbage" to 75.00
+            // add more items and their prices as needed
+        )
+
+        val farmerItemPrice = itemPrices[edtname]
+
+        if(edtweight.isEmpty()){
+            fiweight.error = "Please Enter Weight"
+            fiweight.requestFocus()
+        }
+        if(farmerItemPrice == null){
+            finame.error = "Please Enter a Valid Item Name"
+            finame.requestFocus()
+            return
+        }
 
         val calender = Calendar.getInstance().time
-        val transDate = DateFormat.getDateInstance().format(calender)
-        val transTotalFuelEfficient = "%.2f".format(1 / transFuelEfficient.toDouble())
-        val transTotalFuelCost = "%.2f".format( (transDistance.toDouble() / transFuelEfficient.toDouble()) * transFuelPrice.toDouble())
-        val transTotalWeightFactor = "%.2f".format(transItemWeight.toDouble() * transWeightFactor.toDouble())
-        val transTotalCost = "%.2f".format((transTotalFuelCost.toDouble() + transDriverWage.toDouble() + transTotalWeightFactor.toDouble()))
+        val farmerCalDate = DateFormat.getDateInstance().format(calender)
 
-        iweighttotalfactor.text = transTotalWeightFactor
-        itotalfuelefficient.text = transTotalFuelEfficient
-        itotalfuelcost.text = transTotalFuelCost
-        itotalcost.text = transTotalCost
+        val farmerProfit = "%.2f".format(farmerItemPrice * edtweight.toDouble() )
+        val farmerTotalProfit = "%.2f".format(farmerProfit.toDouble() - edtexpenses.toDouble())
 
-        val transInfo = FarmerCalModel(transId, transItem, transDate,
-            "%.2f".format(transItemWeight.toDouble()),
-            "%.2f".format(transWeightFactor.toDouble()),
-            "%.2f".format(transTotalWeightFactor.toDouble()),
-            transPickUp, transDelivery,
-            "%.2f".format(transDistance.toDouble()),
-            "%.2f".format(transFuelEfficient.toDouble()),
-            "%.2f".format(transFuelPrice.toDouble()), transTotalFuelEfficient, transTotalFuelCost,
-            "%.2f".format(transDriverWage.toDouble()),
-            transTotalCost)
+        fitotalprofit.text =  farmerTotalProfit
 
-        dbRef.setValue(transInfo)
+
+
+        val farmerInfo = FarmerCalModel(farmerId, edtname, farmerCalDate,
+            "%.2f".format(edtweight.toDouble()),
+            farmerTotalProfit)
+
+        dbRef.setValue(farmerInfo)
     }
 
-}
-    }
 }

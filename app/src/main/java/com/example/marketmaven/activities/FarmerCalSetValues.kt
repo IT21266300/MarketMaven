@@ -91,7 +91,7 @@ class FarmerCalSetValues : AppCompatActivity() {
 
         dbRef.child(farmerId).setValue(farmer).addOnCompleteListener{
             Toast.makeText(this, "New Farmer Calculation Add Successfully", Toast.LENGTH_LONG).show()
-            val intentDone = Intent(this, FarmerCalResult::class.java)
+            val intentDone = Intent(this, FarmerCalHistory::class.java)
             startActivity(intentDone)
 
         }.addOnFailureListener{ err ->

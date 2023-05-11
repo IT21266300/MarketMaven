@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    android:padding="10dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/farmer_cal_header"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/appBar"
+            android:layout_marginHorizontal="34dp"
+            android:layout_marginVertical="10dp"
+            android:fontFamily="@font/poppins"
+            android:text="@string/farmer_cal_Update"
+            android:textAlignment="center"
+            android:textColor="@color/headingMain"
+            android:textSize="30sp"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:id="@+id/item_abt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/farmer_cal_header"
+            android:layout_marginHorizontal="10dp"
+            android:background="@drawable/rounded_corners"
+            android:elevation="8dp"
+            android:gravity="center"
+            android:paddingHorizontal="12dp"
+            android:paddingVertical="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins"
+                android:text="@string/item_name"
+                android:textColor="@color/headingOpt2"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/edtname"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:text="Tomato"
+                android:textColor="@color/headingOpt2"
+                android:textSize="24sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/cal_form"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/item_abt"
+            android:layout_marginHorizontal="10dp"
+            android:layout_marginVertical="16dp"
+            android:background="@drawable/rounded_corners"
+            android:elevation="8dp"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:paddingHorizontal="12sp"
+            android:paddingVertical="20dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/label_weight"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins"
+                    android:labelFor="@id/edt_weight"
+                    android:text="@string/item_weight"
+                    android:textColor="@color/headingMain"
+                    android:textSize="23sp"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/edtweight"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:ems="10"
+                    android:hint="@string/hint_item_weight"
+                    android:inputType="numberDecimal"
+                    android:textColor="@color/para_text"
+                    android:textColorHint="@color/headingOpt1"
+                    android:textSize="16sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/expences"
+                    android:layout_width="match_parent"
+                    android:layout_height="47dp"
+                    android:fontFamily="@font/poppins"
+                    android:text="@string/farmer_cal_fun_text2"
+                    android:textColor="@color/headingMain"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/edtexpenses"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:ems="10"
+                    android:hint="@string/farmer_cal_fun_text2"
+                    android:inputType="numberDecimal"
+                    android:textColor="@color/para_text"
+                    android:textColorHint="@color/headingOpt1"
+                    android:textSize="16sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="12dp"
+                android:gravity="center_horizontal"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/farmerUpdateBtn"
+                    android:layout_width="125dp"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/backgroundOpt2"
+                    android:fontFamily="@font/poppins"
+                    android:text="Update"
+                    android:textAllCaps="false"
+                    android:textSize="16sp" />
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</ScrollView>

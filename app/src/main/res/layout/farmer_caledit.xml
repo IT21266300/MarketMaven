@@ -110,7 +110,7 @@
             <TextView
                 android:id="@+id/label_pickup"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="51dp"
                 android:fontFamily="@font/poppins"
                 android:labelFor="@id/edt_total_expens"
                 android:text="@string/farmer_cal_fun_text2"

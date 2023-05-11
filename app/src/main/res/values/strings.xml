@@ -12,6 +12,8 @@
     <string name="farmer_cal_fun_text2.1">(*Not Mandatory)</string>
     <string name="farmer_cal_fun_text3">Your Profit is:</string>
     <string name="farmer_cal_display_Profit">Farmer Profit</string>
+    <string name="farmer_cal_Update">Update Farmer Calculation</string>
+
 
     <!--    farmer dashboard -->
     <string name="Farmer_Dash_h">Farmer Dashboard</string>
