@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background">
+
+    <include
+        android:id="@+id/appBar"
+        layout="@layout/appbar" />
+
+    <TextView
+        android:id="@+id/trans_dash"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/appBar"
+        android:layout_marginHorizontal="34dp"
+        android:layout_marginVertical="10dp"
+        android:layout_marginTop="48dp"
+        android:fontFamily="@font/poppins"
+        android:text="@string/transport_dash_head"
+        android:textAlignment="textStart"
+        android:textColor="@color/headingMain"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/appBar" />
+
+    <Button
+        android:id="@+id/trans_price"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_below="@+id/trans_dash"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="20dp"
+        android:backgroundTint="@color/backgroundOpt2"
+        android:fontFamily="@font/poppins"
+        android:text="@string/trans_prices"
+        android:textAllCaps="false"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:icon="@drawable/ic_baseline_keyboard_double_arrow_right_24"
+        app:iconGravity="textEnd"
+        app:iconPadding="0dp"
+        app:iconTintMode="src_in"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/trans_his_btn" />
+
+    <Button
+        android:id="@+id/trans_his_btn"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_below="@+id/trans_dash"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="20dp"
+        android:backgroundTint="@color/backgroundOpt2"
+        android:fontFamily="@font/poppins"
+        android:text="@string/trans_history"
+        android:textAllCaps="false"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:icon="@drawable/ic_baseline_keyboard_double_arrow_right_24"
+        app:iconGravity="textEnd"
+        app:iconPadding="0dp"
+        app:iconTintMode="src_in"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cal_trans_btn" />
+
+    <Button
+        android:id="@+id/cal_trans_btn"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_below="@+id/trans_dash"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="20dp"
+        android:backgroundTint="@color/backgroundOpt2"
+        android:fontFamily="@font/poppins"
+        android:text="@string/add_transport"
+        android:textAlignment="center"
+        android:textAllCaps="false"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:icon="@drawable/ic_baseline_keyboard_double_arrow_right_24"
+        app:iconGravity="end"
+        app:iconPadding="0dp"
+        app:iconTintMode="src_in"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/trans_dash" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

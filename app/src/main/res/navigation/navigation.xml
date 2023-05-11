@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    android:label="Transport Dashboard"
+    app:startDestination="@id/homeFragment">
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.marketmaven.fragments.HomeFragment"
+        android:label="Home"
+        tools:layout="@layout/fragment_home" />
+    <fragment
+        android:id="@+id/transportFragment"
+        android:name="com.example.marketmaven.fragments.TransportDashboardFragment"
+        android:label="Transport Dashboard"
+        tools:layout="@layout/fragment_transportdashboard" />
+    <fragment
+        android:id="@+id/itemListFragment"
+        android:name="com.example.marketmaven.fragments.itemListFragment"
+        android:label="fragment_item_list"
+        tools:layout="@layout/fragment_item_list" />
+    <fragment
+        android:id="@+id/cal_transFragment"
+        android:name="com.example.marketmaven.fragments.caltransFragment"
+        android:label="fragment_cal_trans"
+        tools:layout="@layout/fragment_cal_trans" />
+    <fragment
+        android:id="@+id/transportHistoryFragment2"
+        android:name="com.example.marketmaven.fragments.TransportHistoryFragment"
+        android:label="fragment_transport_history"
+        tools:layout="@layout/fragment_transport_history" />
+    <fragment
+        android:id="@+id/transportHisItemFragment2"
+        android:name="com.example.marketmaven.fragments.TransportHisItemFragment"
+        android:label="fragment_transport_his_item"
+        tools:layout="@layout/fragment_transport_his_item" />
+</navigation>
