@@ -1,9 +1,10 @@
-// Import necessary packages
-package com.example.marketmaven.activities
+package com.example.marketmaven.fragments
 
-import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.fragment.app.Fragment
+import android.view.LayoutInflater
+import android.view.View
+import android.view.ViewGroup
 import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
@@ -14,10 +15,8 @@ import com.google.firebase.database.FirebaseDatabase
 import java.text.DateFormat
 import java.util.Calendar
 
-// Declare a class named CalculateTransport which extends the AppCompatActivity class
-class CalculateTransport : AppCompatActivity() {
+class caltransFragment : Fragment() {
 
-    // Declare EditText variables for various inputs
     lateinit var itemName: EditText
     lateinit var itemWeight: EditText
     lateinit var itemWeightFactor: EditText
@@ -27,38 +26,34 @@ class CalculateTransport : AppCompatActivity() {
     lateinit var fuelEfficient: EditText
     lateinit var fuelPrice: EditText
     lateinit var driverWage: EditText
-
-    // Declare Button variables for cancel and submit
     private lateinit var calculateBtn: Button
     private lateinit var cancelBtn: Button
 
-    // Declare a DatabaseReference variable to reference the Firebase database
     lateinit var dbRef: DatabaseReference
 
+    override fun onCreateView(
+        inflater: LayoutInflater, container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View? {
+        // Inflate the layout for this fragment
+        val view =  inflater.inflate(R.layout.fragment_cal_trans, container, false)
+
+        itemName = view.findViewById(R.id.itemName)
+        itemWeight = view.findViewById(R.id.edt_weight)
+        itemWeightFactor = view.findViewById(R.id.edt_weight_factor)
+        pickupLocation = view.findViewById(R.id.edt_pickup)
+        deliveryLocation = view.findViewById(R.id.edt_delivery)
+        distance = view.findViewById(R.id.edt_distance)
+        fuelEfficient = view.findViewById(R.id.edt_fuelEfficient)
+        fuelPrice = view.findViewById(R.id.edt_fuelPrice)
+        driverWage = view.findViewById(R.id.edt_driverWage)
+        cancelBtn = view.findViewById(R.id.cancelBtn)
+        calculateBtn = view.findViewById(R.id.submitBtn)
 
 
-    // onCreate() method of the activity
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        // Set the content view of the activity
-        setContentView(R.layout.transcalculate)
-
-        itemName = findViewById(R.id.itemName)
-        itemWeight = findViewById(R.id.edt_weight)
-        itemWeightFactor = findViewById(R.id.edt_weight_factor)
-        pickupLocation = findViewById(R.id.edt_pickup)
-        deliveryLocation = findViewById(R.id.edt_delivery)
-        distance = findViewById(R.id.edt_distance)
-        fuelEfficient = findViewById(R.id.edt_fuelEfficient)
-        fuelPrice = findViewById(R.id.edt_fuelPrice)
-        driverWage = findViewById(R.id.edt_driverWage)
-        cancelBtn = findViewById(R.id.cancelBtn)
-        calculateBtn = findViewById(R.id.submitBtn)
-
-
-        itemName.setText(intent.getStringExtra("iname").toString())
-
-        itemName.setEnabled(false)
+        val args = this.arguments
+        val inputs = args?.getString("iname")
+        itemName.setText(inputs)
 
         dbRef = FirebaseDatabase.getInstance().getReference("Transport")
 
@@ -67,9 +62,12 @@ class CalculateTransport : AppCompatActivity() {
         }
 
         cancelBtn.setOnClickListener {
-            val intentCancel = Intent(this, TransportDashboard::class.java)
-            startActivity(intentCancel)
+            val fragment = TransportsDashboardFragment()
+            val transaction = fragmentManager?.beginTransaction()
+            transaction?.replace(R.id.fragmentContainerView, fragment, null)?.addToBackStack(null)?.commit()
         }
+
+        return view
 
     }
 
@@ -85,48 +83,57 @@ class CalculateTransport : AppCompatActivity() {
         val transDriverWage = driverWage.text.toString()
 
         if(transItem.isEmpty()){
-            itemName.error = "Please Enter Value"
+            itemName.error = "Transport Item Required!"
             itemName.requestFocus()
+            return
         }
 
-        if(transItemWeight.isEmpty()){
-            itemWeight.error = "Please Enter Value"
+        if(transItemWeight.isEmpty() || transItemWeight.toDouble() <= 0){
+            itemWeight.error = "Please Enter Valid Item Weight!"
             itemName.requestFocus()
+            return
         }
 
-        if(transWeightFactor.isEmpty()){
-            itemWeightFactor.error = "Please Enter Value"
+        if(transWeightFactor.isEmpty() || transWeightFactor.toDouble() <= 0){
+            itemWeightFactor.error = "Please Enter Valid Weight Factor!"
             itemName.requestFocus()
+            return
         }
 
         if(transPickUp.isEmpty()){
-            pickupLocation.error = "Please Enter Value"
+            pickupLocation.error = "Pickup Location Required!"
             itemName.requestFocus()
+            return
         }
 
         if(transDelivery.isEmpty()){
-            deliveryLocation.error = "Please Enter Value"
+            deliveryLocation.error = "Delivery Location Required!"
             itemName.requestFocus()
+            return
         }
 
-        if(transDistance.isEmpty()){
-            distance.error = "Please Enter Value"
+        if(transDistance.isEmpty() || transDistance.toDouble() <= 0){
+            distance.error = "Please Enter Valid Distance!"
             itemName.requestFocus()
+            return
         }
 
-        if(transFuelEfficient.isEmpty()){
-            fuelEfficient.error = "Please Enter Value"
+        if(transFuelEfficient.isEmpty() || transFuelEfficient.toDouble() <= 0){
+            fuelEfficient.error = "Please Enter Valid Fuel Efficient!"
             itemName.requestFocus()
+            return
         }
 
-        if(transFuelPrice.isEmpty()){
-            fuelPrice.error = "Please Enter Value"
+        if(transFuelPrice.isEmpty() || transFuelPrice.toDouble() <= 0){
+            fuelPrice.error = "Please Enter Valid Fuel Price!"
             itemName.requestFocus()
+            return
         }
 
-        if(transDriverWage.isEmpty()){
-            driverWage.error = "Please Enter Value"
+        if(transDriverWage.isEmpty() || transDriverWage.toDouble() <= 0){
+            driverWage.error = "Please Enter Valid Driver Wage!"
             itemName.requestFocus()
+            return
         }
 
 
@@ -149,12 +156,13 @@ class CalculateTransport : AppCompatActivity() {
             "%.2f".format(transDriverWage.toDouble()),
             transTotalCost)
         dbRef.child(transId).setValue(transport).addOnCompleteListener{
-            Toast.makeText(this, "New Transport Add Successfully", Toast.LENGTH_LONG).show()
-            val intentDone = Intent(this, TransportHistory::class.java)
-            startActivity(intentDone)
+            Toast.makeText(requireContext(), "New Transport Add Successfully", Toast.LENGTH_LONG).show()
+            val fragment = TransportsHistoryFragment()
+            val transaction = fragmentManager?.beginTransaction()
+            transaction?.replace(R.id.fragmentContainerView, fragment, null)?.addToBackStack(null)?.commit()
 
         }.addOnFailureListener{ err ->
-            Toast.makeText(this, "Error ${err.message}", Toast.LENGTH_LONG).show()
+            Toast.makeText(requireContext(), "Error ${err.message}", Toast.LENGTH_LONG).show()
         }
 
     }
