@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".fragments.HomeFragment"
+    android:background="@drawable/background">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingVertical="100dp">
+
+        <ImageView
+            android:id="@+id/main_logo"
+            android:layout_width="wrap_content"
+            android:layout_height="100dp"
+            android:layout_below="@id/appBar"
+            android:src="@drawable/logo" />
+
+        <Button
+            android:id="@+id/trans_price"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_below="@+id/main_logo"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="58dp"
+            android:layout_marginEnd="20dp"
+            android:backgroundTint="@color/backgroundOpt2"
+            android:fontFamily="@font/poppins"
+            android:text="Farmer"
+            android:textAllCaps="false"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            app:icon="@drawable/ic_baseline_keyboard_double_arrow_right_24"
+            app:iconGravity="textEnd"
+            app:iconPadding="0dp"
+            app:iconTintMode="src_in" />
+
+        <Button
+            android:id="@+id/transportBtn"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_below="@+id/farmer"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="50dp"
+            android:layout_marginEnd="20dp"
+            android:backgroundTint="@color/backgroundOpt2"
+            android:fontFamily="@font/poppins"
+            android:text="Transport"
+            android:textAllCaps="false"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            app:icon="@drawable/ic_baseline_keyboard_double_arrow_right_24"
+            app:iconGravity="textEnd" />
+
+        <Button
+            android:id="@+id/sellarBtn"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_below="@+id/transportBtn"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="50dp"
+            android:layout_marginEnd="20dp"
+            android:backgroundTint="@color/backgroundOpt2"
+            android:fontFamily="@font/poppins"
+            android:text="Seller"
+            android:textAllCaps="false"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            app:icon="@drawable/ic_baseline_keyboard_double_arrow_right_24"
+            app:iconGravity="textEnd" />
+
+    </LinearLayout>
+
+
+
+
+
+</FrameLayout>
