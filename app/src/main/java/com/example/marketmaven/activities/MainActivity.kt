@@ -1,42 +1,49 @@
 package com.example.marketmaven.activities
 
 import android.content.Intent
+import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
-import androidx.appcompat.app.AppCompatActivity
-import com.example.marketmaven.R
-
+import com.example.madproject1.R
 
 class MainActivity : AppCompatActivity() {
 
-    private  lateinit var btnCalFarmer: Button
-    private lateinit var farmer_his_btn: Button
-    private lateinit var farmer_price: Button
+    private lateinit var btnInsertData: Button
+    private lateinit var btnFetchData: Button
+    private lateinit var btnCalculateAmount: Button
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_farmer_dash)
+        setContentView(R.layout.activity_main_layout)
 
-        btnCalFarmer = findViewById(R.id.btnCalFarmer)
-        farmer_his_btn = findViewById(R.id.farmer_his_btn)
-        farmer_price = findViewById(R.id.farmer_price)
+        btnInsertData = findViewById(R.id.buttonMain1)
+        btnFetchData = findViewById(R.id.buttonMain2)
+        btnCalculateAmount = findViewById(R.id.buttonMain3)
 
+        btnInsertData.setOnClickListener {
 
-        btnCalFarmer.setOnClickListener {
-            val intent1 = Intent(this, ItemListFarmer::class.java)
-            startActivity(intent1)
+            val intent = Intent(this, ItemDataInsert::class.java)
+            startActivity(intent)
+        }
+        btnFetchData.setOnClickListener {
+            val intent = Intent(this, DisplayActivity::class.java)
+            startActivity(intent)
+        }
+        btnCalculateAmount.setOnClickListener {
+            val intent = Intent(this, CalculateCost::class.java)
+            startActivity(intent)
         }
 
-        farmer_his_btn.setOnClickListener {
-            val intent2 = Intent(this, FarmerCalHistory::class.java)
-            startActivity(intent2)
-        }
-        farmer_price.setOnClickListener {
-            val intent1 = Intent(this, ItermPriceEdit::class.java)
-            startActivity(intent1)
-        }
+//        setContentView(R.layout.activity_main)
+//        setContentView(R.layout.activity_selling_item)
+//        setContentView(R.layout.activity_itemcost_history)
+//        setContentView(R.layout.activity_calculate_cost)
+//        setContentView(R.layout.activity_item_data_insert)
 
 
-        // val firebase: DatabaseReference = FirebaseDatabase.getInstance().getReference()
+
+
+
+
     }
 }

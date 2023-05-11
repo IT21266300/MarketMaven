@@ -58,6 +58,27 @@
         <activity
             android:name=".activities.ItemList"
             android:exported="false" />
+
+        <activity
+            android:name=".activities.ShowItemData"
+            android:exported="false" />
+
+
+        <activity
+            android:name=".activities.DisplayActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activities.CalculateCost"
+            android:exported="false" />
+        <activity
+            android:name=".activities.ItemDataInsert"
+            android:exported="false" />
+
+        <activity
+            android:name=".activities.MainActivity"
+            android:exported="false" />
+
+
         <activity
             android:name=".activities.Startup"
             android:exported="true">

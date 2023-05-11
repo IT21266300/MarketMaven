@@ -184,5 +184,12 @@
     <string name="sign_in_btn">SignIn</string>
     <string name="Register">Register</string>
 
+    <!--    selling cost calculation form-->
+    <string name="cal_selling_cost">Calculate Selling Cost </string>
+
+
+
+    <string name="loadingData">Loading Data...</string>
+
 
 </resources>
