@@ -1,5 +1,6 @@
 package com.example.marketmaven.activities
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.TextView
@@ -48,17 +49,17 @@ class FarmerCalHistory : AppCompatActivity() {
             override fun onDataChange(snapshot: DataSnapshot) {
                 farmerHisList.clear()
                 if(snapshot.exists()){
-                    for (transSnap in snapshot.children){
-                        val farmerData =  transSnap.getValue(FarmerCalModel::class.java)
+                    for (farmerSnap in snapshot.children){
+                        val farmerData =  farmerSnap.getValue(FarmerCalModel::class.java)
                         farmerHisList.add(farmerData!!)
                     }
                     val farmerHisAdapter = farmerAdapter(farmerHisList)
                     farmerHisRecycle.adapter = farmerHisAdapter
 
-                    farmerHisAdapter.setOnItemClickListener(object : farmerHisAdapter.onItemClickListener{
+                    farmerHisAdapter.setOnItemClickListener(object : farmerAdapter.onItemClickListener{
                         override fun onItemClick(position: Int) {
 
-                            val intent = Intent(this@TransportHistory, TransportHisItem::class.java)
+                            val intent = Intent(this@FarmerCalHistory, FarmerDetailHistory::class.java)
 
                             //put extras
                             intent.putExtra("transId", transHisList[position].transId)
@@ -80,6 +81,7 @@ class FarmerCalHistory : AppCompatActivity() {
 
                             startActivity(intent)
                         }
+                    })
 
 
                         farmerHisRecycle.visibility = View.VISIBLE
