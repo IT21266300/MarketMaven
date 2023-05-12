@@ -29,6 +29,7 @@ class FarmerCalHistory : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.farmer_historypage)
 
+        // Find the RecyclerView from the layout and set its layout manager and fixed size
         farmerHisRecycle = findViewById(R.id.farmerHisRecycle)
         farmerHisRecycle.layoutManager = LinearLayoutManager(this)
         farmerHisRecycle.setHasFixedSize(true)
@@ -40,7 +41,9 @@ class FarmerCalHistory : AppCompatActivity() {
 
     }
 
+    // Function to retrieve the data and populate the RecyclerView
     private fun  getFarmerHistory(){
+        // Hide the RecyclerView and show the loading TextView
         farmerHisRecycle.visibility = View.GONE
         txtLoading.visibility = View.VISIBLE
 
@@ -58,7 +61,7 @@ class FarmerCalHistory : AppCompatActivity() {
 
                     farmerHisAdapter.setOnItemClickListener(object : farmerAdapter.onItemClickListener{
                         override fun onItemClick(position: Int) {
-
+// Create an intent to go to the FarmerDetailHistory activity
                             val intent = Intent(this@FarmerCalHistory, FarmerDetailHistory::class.java)
 
                             //put extras
@@ -68,12 +71,12 @@ class FarmerCalHistory : AppCompatActivity() {
                             intent.putExtra("calDate", farmerHisList[position].calDate)
                             intent.putExtra("edtTotalExpens", farmerHisList[position].edtTotalExpens)
                             intent.putExtra("farmerTotalProfit", farmerHisList[position].farmerTotalProfit)
-
+                            // Start the activity
                             startActivity(intent)
                         }
                     })
 
-
+// Show the RecyclerView and hide the loading TextView
                         farmerHisRecycle.visibility = View.VISIBLE
                     txtLoading.visibility = View.GONE
                 }

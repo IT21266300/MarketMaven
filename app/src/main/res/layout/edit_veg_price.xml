@@ -12,7 +12,7 @@
     <TextView
         android:id="@+id/Transport_title"
         android:layout_width="match_parent"
-        android:layout_height="115dp"
+        android:layout_height="79dp"
 
         android:layout_below="@id/appBar"
         android:layout_alignParentEnd="true"
@@ -86,11 +86,24 @@
 
                 <TextView
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_height="39dp"
                     android:layout_gravity="center"
                     android:fontFamily="@font/lato"
                     android:letterSpacing="0.09"
                     android:text="@string/beans"
+                    android:textAlignment="center"
+                    android:textColor="@color/headingMain"
+                    android:textSize="24sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/textView3"
+                    android:layout_width="match_parent"
+                    android:layout_height="39dp"
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/lato"
+                    android:letterSpacing="0.09"
+                    android:text="Rs. 90.00"
                     android:textAlignment="center"
                     android:textColor="@color/headingMain"
                     android:textSize="24sp"
@@ -123,7 +136,8 @@
                     android:layout_width="130dp"
                     android:layout_height="120dp"
                     android:layout_gravity="center_horizontal"
-                    android:src="@drawable/mango" />
+                    android:src="@drawable/mango"
+                    app:srcCompat="@drawable/a" />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -131,7 +145,20 @@
                     android:layout_gravity="center"
                     android:fontFamily="@font/lato"
                     android:letterSpacing="0.09"
-                    android:text="@string/mango"
+                    android:text="@string/avocado"
+                    android:textAlignment="center"
+                    android:textColor="@color/headingMain"
+                    android:textSize="24sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/textView4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/lato"
+                    android:letterSpacing="0.09"
+                    android:text="Rs. 150.00"
                     android:textAlignment="center"
                     android:textColor="@color/headingMain"
                     android:textSize="24sp"
@@ -162,7 +189,8 @@
                     android:layout_width="130dp"
                     android:layout_height="120dp"
                     android:layout_gravity="center_horizontal"
-                    android:src="@drawable/graphs" />
+                    android:src="@drawable/graphs"
+                    app:srcCompat="@drawable/b" />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -170,7 +198,20 @@
                     android:layout_gravity="center"
                     android:fontFamily="@font/lato"
                     android:letterSpacing="0.09"
-                    android:text="@string/graphs"
+                    android:text="@string/banana"
+                    android:textAlignment="center"
+                    android:textColor="@color/headingMain"
+                    android:textSize="24sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/textView5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/lato"
+                    android:letterSpacing="0.09"
+                    android:text=" Rs. 90.00"
                     android:textAlignment="center"
                     android:textColor="@color/headingMain"
                     android:textSize="24sp"
@@ -239,7 +280,8 @@
                     android:layout_width="130dp"
                     android:layout_height="120dp"
                     android:layout_gravity="center_horizontal"
-                    android:src="@drawable/carrot" />
+                    android:src="@drawable/carrot"
+                    app:srcCompat="@drawable/d" />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -247,7 +289,20 @@
                     android:layout_gravity="center"
                     android:fontFamily="@font/lato"
                     android:letterSpacing="0.09"
-                    android:text="@string/carrots"
+                    android:text="@string/cabbage"
+                    android:textAlignment="center"
+                    android:textColor="@color/headingMain"
+                    android:textSize="24sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/textView6"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/lato"
+                    android:letterSpacing="0.09"
+                    android:text="Rs. 75.00"
                     android:textAlignment="center"
                     android:textColor="@color/headingMain"
                     android:textSize="24sp"

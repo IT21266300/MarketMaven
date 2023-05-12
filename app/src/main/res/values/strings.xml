@@ -94,8 +94,8 @@
 
     <!--    select_farmer_items-->
     <string name="farm_item_select">Pick Your Item</string>
-    <string name="farm_item_price_edit">Pick Item To edit price</string>
-    <string name="farm_item_price_edit_heading">Change Vegetables Buying price</string>
+    <string name="farm_item_price_edit">Pick Item To Check Buying price</string>
+    <string name="farm_item_price_edit_heading">Vegetables Buying price</string>
 
     <!--    farmer_history-->
     <string name="farm_item_history_expenses">Farming Expenses</string>

@@ -16,13 +16,13 @@ class HomePage : AppCompatActivity() {
         setContentView(R.layout.dashboard)
 
 
-
+//assigning buttons
         CalFarmer = findViewById(R.id.farmerListbtn1)
         transList = findViewById(R.id.transListBtn)
         sellerList = findViewById(R.id.sellerListBtn)
 
 
-
+//set navigation's
         CalFarmer.setOnClickListener {
             val intent1 = Intent(this, FarmerDash::class.java)
             startActivity(intent1)

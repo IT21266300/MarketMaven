@@ -12,6 +12,7 @@ import com.example.marketmaven.models.ItemData
 
 class ItemListFarmer : AppCompatActivity() {
 
+    // Declare variables for the RecyclerView, ArrayList, image IDs, and item names.
     private lateinit var newRecyclerView: RecyclerView
     private lateinit var newArrayList: ArrayList<ItemData>
     lateinit var imageId: Array<Int>
@@ -21,14 +22,14 @@ class ItemListFarmer : AppCompatActivity() {
         super.onCreate(savedInstanceState)
 
         setContentView(R.layout.itemdashboard_farm)
-
+// Initialize the image IDs and item names arrays
         imageId = arrayOf(
             R.drawable.a,
             R.drawable.b,
             R.drawable.c,
             R.drawable.d
         )
-
+//names of veg and flutes
         itemName = arrayOf(
             "Avocado",
             "Banana",
@@ -36,25 +37,30 @@ class ItemListFarmer : AppCompatActivity() {
             "Cabbage"
         )
 
+        // Find the RecyclerView in the layout and set its layout manager and fixed size.
         newRecyclerView = findViewById(R.id.itemRecycle)
         newRecyclerView.layoutManager = LinearLayoutManager(this)
         newRecyclerView.setHasFixedSize(true)
 
+        // Initialize the ArrayList and call the getItemData() method to populate it.
         newArrayList = arrayListOf<ItemData>()
         getItemData()
     }
 
+    // This method populates the ArrayList with data from the image ID and item name arrays.
     private fun getItemData() {
         for(i in imageId.indices){
             val item = ItemData(imageId[i], itemName[i])
             newArrayList.add(item)
         }
-
+// Create a new adapter with the ArrayList and set it to the RecyclerView.
         var adapter = ItemAdapter(newArrayList)
         newRecyclerView.adapter = adapter
+
+        // Set an item click listener for the adapter to launch the FarmerCalSetValues activity.
         adapter.setOnItemClickListener(object : ItemAdapter.onItemClickListener{
             override fun onItemClick(position: Int) {
-//                Toast.makeText(this@ItemList, "Clicked on item no: $position", Toast.LENGTH_LONG).show()
+
                 val intent = Intent(this@ItemListFarmer, FarmerCalSetValues::class.java)
                 intent.putExtra("iname", itemName[position])
                 startActivity(intent)

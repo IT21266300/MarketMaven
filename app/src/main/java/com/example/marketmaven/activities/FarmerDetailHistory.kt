@@ -17,7 +17,7 @@ import java.text.DateFormat
 import java.util.Calendar
 
 class FarmerDetailHistory : AppCompatActivity() {
-
+    // Declare variables for the TextViews and ImageButtons
     private lateinit var  finame: TextView
     private lateinit var  fiweight: TextView
     private lateinit var  fidate: TextView
@@ -48,9 +48,11 @@ class FarmerDetailHistory : AppCompatActivity() {
 
     }
 
+    //Delete farmer details
     private fun deleteRecord(
         farmerId: String
     ){
+        // Remove the record from the database
         val dbRef = FirebaseDatabase.getInstance().getReference("Farmer").child(farmerId)
         val mTask = dbRef.removeValue()
 
@@ -84,6 +86,7 @@ class FarmerDetailHistory : AppCompatActivity() {
 
     }
 
+    // Function to open the update dialog
     @SuppressLint("MissingInflatedId")
     private fun openUpdateDialog(
         farmerId: String,
@@ -128,6 +131,7 @@ class FarmerDetailHistory : AppCompatActivity() {
         }
     }
 
+    //Update Function
     private fun updateFarmerData(
         farmerId: String,
         edtname: String,
@@ -146,6 +150,7 @@ class FarmerDetailHistory : AppCompatActivity() {
 
         val farmerItemPrice = itemPrices[edtname]
 
+        //check input data is correct
         if(edtweight.isEmpty()){
             fiweight.error = "Please Enter Weight"
             fiweight.requestFocus()
